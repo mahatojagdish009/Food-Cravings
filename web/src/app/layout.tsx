@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import { HydrationBoundary } from '@/components/HydrationBoundary'
 
 const inter = Inter({ 
@@ -95,6 +96,7 @@ export default function RootLayout({
             {children}
           </div>
         </HydrationBoundary>
+        <Analytics />
       </body>
     </html>
   )
