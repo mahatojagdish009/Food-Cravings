@@ -3,7 +3,6 @@
 import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';
-import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import RecipeCard from '@/components/RecipeCard';
 import { EnhancedChatInterface } from '@/components/EnhancedChatInterface';
@@ -179,9 +178,6 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Toaster position="top-right" />
-      
-      {/* Header */}
-      <Header />
       
       {/* Hero Section */}
       <HeroSection />
