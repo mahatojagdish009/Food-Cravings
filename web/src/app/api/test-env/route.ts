@@ -9,6 +9,8 @@ export async function GET() {
     ollamaUrlExists: !!process.env.OLLAMA_BASE_URL,
     embedModelExists: !!process.env.EMBED_MODEL,
     llmModelExists: !!process.env.LLM_MODEL,
+    // Production deployment status
+    isProduction: process.env.NODE_ENV === 'production',
     
     // Show first few characters (for debugging - remove in production)
     groqApiKeyPreview: process.env.GROQ_API_KEY?.substring(0, 8) + '...',
