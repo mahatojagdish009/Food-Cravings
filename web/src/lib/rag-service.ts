@@ -2,32 +2,25 @@ import { Index } from '@upstash/vector';
 import Groq from 'groq-sdk';
 import type { SearchResult } from '@/types';
 
-// Environment variable validation
-if (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'production') {
-  if (!process.env.UPSTASH_VECTOR_REST_URL) {
-    throw new Error('UPSTASH_VECTOR_REST_URL is missing!');
+// Lazy initialization functions
+function getVectorClient() {
+  if (!process.env.UPSTASH_VECTOR_REST_URL || !process.env.UPSTASH_VECTOR_REST_TOKEN) {
+    throw new Error('Upstash Vector environment variables are missing!');
   }
-  if (!process.env.UPSTASH_VECTOR_REST_TOKEN) {
-    throw new Error('UPSTASH_VECTOR_REST_TOKEN is missing!');
-  }
+  return new Index({
+    url: process.env.UPSTASH_VECTOR_REST_URL,
+    token: process.env.UPSTASH_VECTOR_REST_TOKEN,
+  });
+}
+
+function getGroqClient() {
   if (!process.env.GROQ_API_KEY) {
     throw new Error('GROQ_API_KEY is missing!');
   }
+  return new Groq({
+    apiKey: process.env.GROQ_API_KEY,
+  });
 }
-
-// Initialize clients only if environment variables are available
-const vectorClient = process.env.UPSTASH_VECTOR_REST_URL && process.env.UPSTASH_VECTOR_REST_TOKEN 
-  ? new Index({
-      url: process.env.UPSTASH_VECTOR_REST_URL,
-      token: process.env.UPSTASH_VECTOR_REST_TOKEN,
-    })
-  : null;
-
-const groqClient = process.env.GROQ_API_KEY 
-  ? new Groq({
-      apiKey: process.env.GROQ_API_KEY,
-    })
-  : null;
 
 export class RAGService {
   /**
@@ -35,12 +28,9 @@ export class RAGService {
    */
   static async searchFoodItems(query: string, topK: number = 3): Promise<SearchResult[]> {
     try {
-      if (!vectorClient) {
-        throw new Error('Vector client not initialized - check environment variables');
-      }
-
       console.log(`🔍 Searching for: "${query}" (top ${topK} results)`);
       
+      const vectorClient = getVectorClient();
       const results = await vectorClient.query({
         data: query, // Auto-embedding with mixedbread-ai/mxbai-embed-large-v1
         topK,
@@ -181,12 +171,9 @@ Question: ${query}
 
 Please provide a comprehensive, well-structured answer using the formatting guidelines above. Use headings, bullet points, and multiple paragraphs to make the response clear and easy to read.`;
 
-      if (!groqClient) {
-        throw new Error('Groq client not initialized - check environment variables');
-      }
-
       console.log('🧠 Generating answer with Groq LLM...');
       
+      const groqClient = getGroqClient();
       const completion = await groqClient.chat.completions.create({
         messages: [
           { role: 'system', content: systemMessage },
@@ -253,9 +240,7 @@ Please provide a comprehensive, well-structured answer using the formatting guid
       // Test Upstash Vector
       let upstashHealthy = false;
       try {
-        if (!vectorClient) {
-          throw new Error('Vector client not initialized');
-        }
+        const vectorClient = getVectorClient();
         await vectorClient.info();
         upstashHealthy = true;
         console.log('✅ Upstash Vector: Healthy');
@@ -266,9 +251,7 @@ Please provide a comprehensive, well-structured answer using the formatting guid
       // Test Groq
       let groqHealthy = false;
       try {
-        if (!groqClient) {
-          throw new Error('Groq client not initialized');
-        }
+        const groqClient = getGroqClient();
         await groqClient.chat.completions.create({
           messages: [{ role: 'user', content: 'Hello' }],
           model: 'llama-3.1-8b-instant',
