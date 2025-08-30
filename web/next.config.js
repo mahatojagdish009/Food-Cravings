@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// Trigger deployment - Environment variables configured
 const nextConfig = {
   serverExternalPackages: ['@upstash/vector', 'groq-sdk'],
   env: {
@@ -10,10 +11,12 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   
-  // Clean configuration for production
+  // Production deployment ready
   experimental: {
     // Modern Next.js features
   },
 }
+
+module.exports = nextConfig
 
 module.exports = nextConfig
