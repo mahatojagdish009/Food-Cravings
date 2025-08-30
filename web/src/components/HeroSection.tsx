@@ -17,6 +17,35 @@ export default function HeroSection() {
     { icon: UserGroupIcon, value: '1000+', label: 'Happy Cooks' },
   ];
 
+  // Smooth scroll to AI Chat section
+  const scrollToAIChef = () => {
+    const aiSection = document.getElementById('ai-chat-section');
+    aiSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Scroll to Featured Recipes section
+  const scrollToRecipes = () => {
+    const recipesSection = document.getElementById('featured-recipes-section');
+    recipesSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Fun interaction for food emojis
+  const handleFoodClick = (foodType: string) => {
+    // Create a fun notification or action
+    console.log(`You clicked on ${foodType}! 🎉`);
+    // You could add a toast notification here
+  };
+
+  // Handle stats card clicks
+  const handleStatClick = (statLabel: string) => {
+    if (statLabel.includes('Recipes')) {
+      scrollToRecipes();
+    } else if (statLabel.includes('AI Response')) {
+      scrollToAIChef();
+    }
+    // Add more interactions based on stat type
+  };
+
   return (
     <section className="relative bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50 py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       
@@ -57,7 +86,8 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={scrollToRecipes}
+              className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
             >
               🍜 Explore Recipes
             </motion.button>
@@ -65,7 +95,8 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-orange-500 text-orange-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
+              onClick={scrollToAIChef}
+              className="border-2 border-orange-500 text-orange-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 cursor-pointer"
             >
               🤖 Try AI Chef
             </motion.button>
@@ -81,8 +112,10 @@ export default function HeroSection() {
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-orange-100"
+                whileHover={{ scale: 1.05, y: -5 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => handleStatClick(stat.label)}
+                className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-orange-100 cursor-pointer hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex flex-col items-center">
                   <stat.icon className="h-8 w-8 text-orange-600 mb-2" />
@@ -99,14 +132,56 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Floating Food Emojis */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 text-4xl animate-bounce delay-100">🍝</div>
-        <div className="absolute top-40 right-20 text-3xl animate-bounce delay-300">🍛</div>
-        <div className="absolute bottom-40 left-20 text-3xl animate-bounce delay-500">🥘</div>
-        <div className="absolute bottom-20 right-10 text-4xl animate-bounce delay-700">🍜</div>
-        <div className="absolute top-1/2 left-5 text-2xl animate-bounce delay-200">🥟</div>
-        <div className="absolute top-1/3 right-5 text-2xl animate-bounce delay-600">🍲</div>
+      {/* Floating Food Emojis - Now Interactive! */}
+      <div className="absolute inset-0">
+        <motion.div 
+          className="absolute top-20 left-10 text-4xl cursor-pointer hover:scale-110 transition-transform" 
+          whileHover={{ scale: 1.2, rotate: 10 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleFoodClick('pasta')}
+        >
+          🍝
+        </motion.div>
+        <motion.div 
+          className="absolute top-40 right-20 text-3xl cursor-pointer hover:scale-110 transition-transform" 
+          whileHover={{ scale: 1.2, rotate: -10 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleFoodClick('curry')}
+        >
+          🍛
+        </motion.div>
+        <motion.div 
+          className="absolute bottom-40 left-20 text-3xl cursor-pointer hover:scale-110 transition-transform" 
+          whileHover={{ scale: 1.2, rotate: 10 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleFoodClick('stew')}
+        >
+          🥘
+        </motion.div>
+        <motion.div 
+          className="absolute bottom-20 right-10 text-4xl cursor-pointer hover:scale-110 transition-transform" 
+          whileHover={{ scale: 1.2, rotate: -10 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleFoodClick('ramen')}
+        >
+          🍜
+        </motion.div>
+        <motion.div 
+          className="absolute top-1/2 left-5 text-2xl cursor-pointer hover:scale-110 transition-transform" 
+          whileHover={{ scale: 1.2, rotate: 15 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleFoodClick('dumplings')}
+        >
+          🥟
+        </motion.div>
+        <motion.div 
+          className="absolute top-1/3 right-5 text-2xl cursor-pointer hover:scale-110 transition-transform" 
+          whileHover={{ scale: 1.2, rotate: -15 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleFoodClick('soup')}
+        >
+          🍲
+        </motion.div>
       </div>
     </section>
   );
