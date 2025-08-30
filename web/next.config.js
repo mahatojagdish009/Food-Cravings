@@ -10,16 +10,9 @@ const nextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   
-  // Disable Next.js development overlay/indicator
-  devIndicators: {
-    buildActivity: false,
-    buildActivityPosition: 'bottom-right',
-  },
-  
-  // Additional dev experience settings
+  // Clean configuration for production
   experimental: {
-    // Disable development overlay completely
-    appDir: true,
+    // Modern Next.js features
   },
 }
 
