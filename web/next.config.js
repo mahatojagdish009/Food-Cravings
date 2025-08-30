@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-// Trigger deployment - Environment variables configured
+// Deployment triggered successfully - Build ready
 const nextConfig = {
   serverExternalPackages: ['@upstash/vector', 'groq-sdk'],
   env: {
