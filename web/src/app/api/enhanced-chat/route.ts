@@ -1,19 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Index } from '@upstash/vector';
 import Groq from 'groq-sdk';
-import { readFileSync } from 'fs';
-import path from 'path';
 
-// Initialize Upstash Vector client
-const index = new Index({
-  url: process.env.UPSTASH_VECTOR_REST_URL!,
-  token: process.env.UPSTASH_VECTOR_REST_TOKEN!,
-});
+// Lazy initialization functions
+function getVectorClient() {
+  if (!process.env.UPSTASH_VECTOR_REST_URL || !process.env.UPSTASH_VECTOR_REST_TOKEN) {
+    throw new Error('Upstash Vector environment variables are missing!');
+  }
+  return new Index({
+    url: process.env.UPSTASH_VECTOR_REST_URL,
+    token: process.env.UPSTASH_VECTOR_REST_TOKEN,
+  });
+}
 
-// Initialize Groq client
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY!,
-});
+function getGroqClient() {
+  if (!process.env.GROQ_API_KEY) {
+    throw new Error('GROQ_API_KEY is missing!');
+  }
+  return new Groq({
+    apiKey: process.env.GROQ_API_KEY,
+  });
+}
 
 // Enhanced system prompt for detailed recipes
 const ENHANCED_SYSTEM_PROMPT = `You are a professional culinary assistant with expertise in global cuisines and detailed recipe creation. 
@@ -56,6 +63,7 @@ export async function POST(request: NextRequest) {
     console.log('Processing enhanced recipe query:', message);
 
     // Search in vector database for relevant recipes
+    const index = getVectorClient();
     const searchResults = await index.query({
       data: message,
       topK,
@@ -92,6 +100,7 @@ Description: ${metadata?.text || ''}`;
       .join('\n\n');
 
     // Generate enhanced response with Groq
+    const groq = getGroqClient();
     const completion = await groq.chat.completions.create({
       messages: [
         {
