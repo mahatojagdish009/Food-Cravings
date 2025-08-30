@@ -18,15 +18,33 @@ export default function HeroSection() {
   ];
 
   // Smooth scroll to AI Chat section
-  const scrollToAIChef = () => {
+  const scrollToAIChef = (e?: React.MouseEvent) => {
+    e?.preventDefault();
+    e?.stopPropagation();
+    
     const aiSection = document.getElementById('ai-chat-section');
-    aiSection?.scrollIntoView({ behavior: 'smooth' });
+    if (aiSection) {
+      aiSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      console.error('AI Chat section not found');
+      // Fallback: scroll to approximate position
+      window.scrollTo({ top: 800, behavior: 'smooth' });
+    }
   };
 
   // Scroll to Featured Recipes section
-  const scrollToRecipes = () => {
+  const scrollToRecipes = (e?: React.MouseEvent) => {
+    e?.preventDefault();
+    e?.stopPropagation();
+    
     const recipesSection = document.getElementById('featured-recipes-section');
-    recipesSection?.scrollIntoView({ behavior: 'smooth' });
+    if (recipesSection) {
+      recipesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      console.error('Featured Recipes section not found');
+      // Fallback: scroll to approximate position
+      window.scrollTo({ top: 1200, behavior: 'smooth' });
+    }
   };
 
   // Fun interaction for food emojis
@@ -37,11 +55,13 @@ export default function HeroSection() {
   };
 
   // Handle stats card clicks
-  const handleStatClick = (statLabel: string) => {
+  const handleStatClick = (statLabel: string, e?: React.MouseEvent) => {
+    e?.preventDefault();
+    e?.stopPropagation();
     if (statLabel.includes('Recipes')) {
-      scrollToRecipes();
+      scrollToRecipes(e);
     } else if (statLabel.includes('AI Response')) {
-      scrollToAIChef();
+      scrollToAIChef(e);
     }
     // Add more interactions based on stat type
   };
@@ -86,7 +106,8 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1)" }}
               whileTap={{ scale: 0.95 }}
-              onClick={scrollToRecipes}
+              onClick={(e) => scrollToRecipes(e)}
+              type="button"
               className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
             >
               🍜 Explore Recipes
@@ -95,7 +116,8 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={scrollToAIChef}
+              onClick={(e) => scrollToAIChef(e)}
+              type="button"
               className="border-2 border-orange-500 text-orange-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 cursor-pointer"
             >
               🤖 Try AI Chef
@@ -114,7 +136,7 @@ export default function HeroSection() {
                 key={stat.label}
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => handleStatClick(stat.label)}
+                onClick={(e) => handleStatClick(stat.label, e)}
                 className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-orange-100 cursor-pointer hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex flex-col items-center">
