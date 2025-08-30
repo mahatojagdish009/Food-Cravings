@@ -26,49 +26,49 @@
   {
     "id": "5",
     "text": "Biryani is a flavorful Indian rice dish made with spices, rice, and usually meat or vegetables.",
-    "region": "Hyderabad",
+    "region": "India",
     "type": "Main Course"
   },
   {
     "id": "6",
     "text": "Samosa is a fried or baked pastry with a spicy potato filling, popular as a snack in India.",
-    "region": "North India",
+    "region": "India",
     "type": "Snack"
   },
   {
     "id": "7",
     "text": "Paneer butter masala is a creamy tomato-based curry made with Indian cottage cheese.",
-    "region": "Punjab",
+    "region": "India",
     "type": "Main Course"
   },
   {
     "id": "8",
     "text": "Masala dosa is a thin, crispy fermented crepe filled with spicy mashed potatoes.",
-    "region": "South India",
+    "region": "India",
     "type": "Breakfast"
   },
   {
     "id": "9",
     "text": "Chole is a spicy chickpea curry from North India, often eaten with rice or bhature.",
-    "region": "North India",
+    "region": "India",
     "type": "Main Course"
   },
   {
     "id": "10",
     "text": "Rasgulla is a spongy dessert made from ball-shaped dumplings of chhena cooked in light syrup.",
-    "region": "Bengal",
+    "region": "India",
     "type": "Dessert"
   },
   {
     "id": "11",
     "text": "Naan is a soft and fluffy flatbread that is traditionally baked in a tandoor.",
-    "region": "North India",
+    "region": "India",
     "type": "Bread"
   },
   {
     "id": "12",
     "text": "Tandoori chicken is chicken marinated in yogurt and spices, roasted in a tandoor.",
-    "region": "Punjab",
+    "region": "India",
     "type": "Main Course"
   },
   {
@@ -80,7 +80,7 @@
   {
     "id": "14",
     "text": "Pav bhaji is a spicy vegetable mash served with soft buttered buns.",
-    "region": "Mumbai",
+    "region": "India",
     "type": "Snack"
   },
   {
@@ -92,361 +92,1291 @@
   {
     "id": "16",
     "text": "Dhokla is a soft and fluffy savory cake made from fermented rice and chickpea flour.",
-    "region": "Gujarat",
+    "region": "India",
     "type": "Snack"
   },
   {
     "id": "17",
     "text": "Butter chicken is a rich tomato gravy dish with tender pieces of marinated chicken.",
-    "region": "Delhi",
+    "region": "India",
     "type": "Main Course"
   },
   {
     "id": "18",
     "text": "Lassi is a cold yogurt drink blended with sugar, salt, or fruits like mango.",
-    "region": "Punjab",
+    "region": "India",
     "type": "Drink"
-  }, 
-   {
+  },
+  {
     "id": "19",
-    "text": "Momo is a type of South Asian dumpling popular in Nepal, filled with meat or vegetables and served with spicy chutney.",
-    "region": "Nepal",
-    "type": "Snack"
+    "text": "Dal tadka is a spiced lentil curry tempered with cumin, mustard seeds, and curry leaves.",
+    "region": "India",
+    "type": "Main Course"
   },
   {
     "id": "20",
-    "text": "Sel roti is a traditional homemade, sweet, ring-shaped rice bread from Nepal.",
-    "region": "Nepal",
+    "text": "Jalebi is a sweet Indian dessert made by deep-frying flour batter in spiral shapes and soaking in sugar syrup.",
+    "region": "India",
     "type": "Dessert"
   },
   {
     "id": "21",
-    "text": "Hilsa curry is a traditional Bengali dish made with hilsa fish and mustard gravy.",
-    "region": "Bangladesh",
-    "type": "Main Course"
-  },
-  {
-    "id": "22",
-    "text": "Bhuna khichuri is a spiced rice and lentil dish often served with beef curry in Bangladesh.",
-    "region": "Bangladesh",
-    "type": "Main Course"
-  },
-  {
-    "id": "23",
-    "text": "Nihari is a slow-cooked stew of beef or lamb, eaten as breakfast in Pakistan.",
-    "region": "Pakistan",
-    "type": "Main Course"
-  },
-  {
-    "id": "24",
-    "text": "Chicken Karahi is a spicy curry cooked in a wok-like pan called a karahi, popular in Pakistan.",
-    "region": "Pakistan",
-    "type": "Main Course"
-  },
-  {
-    "id": "25",
-    "text": "Pad Thai is a stir-fried noodle dish with shrimp, peanuts, and tamarind sauce, one of Thailand's national dishes.",
-    "region": "Thailand",
-    "type": "Main Course"
-  },
-  {
-    "id": "26",
-    "text": "Tom Yum is a hot and sour Thai soup made with shrimp, lemongrass, and lime juice.",
-    "region": "Thailand",
-    "type": "Soup"
-  },
-  {
-    "id": "27",
-    "text": "Pho is a Vietnamese noodle soup consisting of broth, rice noodles, herbs, and meat.",
-    "region": "Vietnam",
-    "type": "Soup"
-  },
-  {
-    "id": "28",
-    "text": "Nasi Goreng is Indonesian-style fried rice often cooked with kecap manis, garlic, shallots, and chili.",
-    "region": "Indonesia",
-    "type": "Main Course"
-  },
-  {
-    "id": "29",
-    "text": "Rendang is a spicy meat dish slow-cooked in coconut milk and spices, originating from Indonesia.",
-    "region": "Indonesia",
-    "type": "Main Course"
-  },
-  {
-    "id": "30",
-    "text": "Nasi lemak is Malaysia's national dish consisting of fragrant rice cooked in coconut milk, served with sambal, anchovies, and egg.",
-    "region": "Malaysia",
-    "type": "Main Course"
-  },
-  {
-    "id": "31",
-    "text": "Adobo is a Filipino dish made by marinating meat in vinegar, soy sauce, and garlic, then simmering it.",
-    "region": "Philippines",
-    "type": "Main Course"
-  },
-  {
-    "id": "32",
-    "text": "Halo-halo is a Filipino dessert made from crushed ice, evaporated milk, and mixed ingredients like sweet beans, fruits, and jellies.",
-    "region": "Philippines",
-    "type": "Dessert"
-  }, 
-    {
-    "id": "33",
     "text": "Peking duck is a famous Beijing dish featuring crispy roasted duck served with pancakes, hoisin sauce, and scallions.",
     "region": "China",
     "type": "Main Course"
   },
   {
-    "id": "34",
+    "id": "22",
     "text": "Kung Pao chicken is a spicy stir-fry dish made with chicken, peanuts, vegetables, and chili peppers.",
     "region": "China",
     "type": "Main Course"
   },
   {
-    "id": "35",
+    "id": "23",
     "text": "Mapo tofu is a Sichuan dish featuring soft tofu in a spicy chili and bean-based sauce, typically with minced pork.",
-    "region": "Sichuan, China",
+    "region": "China",
     "type": "Main Course"
   },
   {
-    "id": "36",
+    "id": "24",
     "text": "Xiao long bao are Chinese soup dumplings filled with meat and hot broth, typically served in a bamboo steamer.",
-    "region": "Shanghai",
+    "region": "China",
     "type": "Snack"
   },
   {
-    "id": "37",
+    "id": "25",
     "text": "Chow mein is a stir-fried noodle dish made with vegetables and sometimes meat or seafood.",
     "region": "China",
     "type": "Noodle"
   },
   {
-    "id": "38",
+    "id": "26",
     "text": "Hot and sour soup is a Chinese soup made with mushrooms, tofu, bamboo shoots, and egg, flavored with vinegar and white pepper.",
     "region": "China",
     "type": "Soup"
   },
   {
-    "id": "39",
+    "id": "27",
     "text": "Dim sum refers to a variety of small Chinese dishes served with tea, including dumplings, buns, and rolls.",
-    "region": "Cantonese, China",
+    "region": "China",
     "type": "Snack"
   },
   {
-    "id": "40",
+    "id": "28",
     "text": "Mooncake is a traditional Chinese pastry filled with lotus seed paste or red bean, eaten during the Mid-Autumn Festival.",
     "region": "China",
     "type": "Dessert"
-  }, 
+  },
   {
-  "id": "41",
-  "text": "Kimchi is a traditional Korean side dish made from fermented vegetables, usually cabbage and radish, with chili pepper and garlic.",
-  "region": "Korea",
-  "type": "Side Dish"
-},
-{
-  "id": "42",
-  "text": "Bibimbap is a Korean mixed rice dish topped with sautéed vegetables, sliced meat, a fried egg, and chili paste.",
-  "region": "Korea",
-  "type": "Main Course"
-},
-{
-  "id": "43",
-  "text": "Tteokbokki is a popular Korean street food made of chewy rice cakes in a spicy red sauce.",
-  "region": "Korea",
-  "type": "Snack"
-}, 
-{
-  "id": "44",
-  "text": "Beef noodle soup is a beloved Taiwanese dish made with braised beef, vegetables, and noodles in a flavorful broth.",
-  "region": "Taiwan",
-  "type": "Soup"
-},
-{
-  "id": "45",
-  "text": "Lu rou fan is a classic Taiwanese comfort food of minced pork belly cooked in soy sauce, served over rice.",
-  "region": "Taiwan",
-  "type": "Main Course"
-},
-{
-  "id": "46",
-  "text": "Bubble tea is a Taiwanese drink made with tea, milk, and chewy tapioca pearls.",
-  "region": "Taiwan",
-  "type": "Drink"
-}, 
-{
-  "id": "47",
-  "text": "Char siu is a Cantonese-style barbecued pork known for its sweet and savory glaze.",
-  "region": "Hong Kong",
-  "type": "Main Course"
-},
-{
-  "id": "48",
-  "text": "Egg tarts are a popular Hong Kong dessert consisting of a flaky pastry crust filled with egg custard.",
-  "region": "Hong Kong",
-  "type": "Dessert"
-},
-{
-  "id": "49",
-  "text": "Wonton noodles are a Hong Kong dish made with thin egg noodles and wontons in a clear broth.",
-  "region": "Hong Kong",
-  "type": "Noodle"
-}, 
-{
-  "id": "50",
-  "text": "Meat pie is an iconic Australian dish consisting of a flaky pastry filled with minced meat and gravy.",
-  "region": "Australia",
-  "type": "Snack"
-},
-{
-  "id": "51",
-  "text": "Lamingtons are sponge cakes coated in chocolate and rolled in coconut, a popular Australian dessert.",
-  "region": "Australia",
-  "type": "Dessert"
-} ,
-{
-  "id": "52",
-  "text": "Pavlova is a meringue-based dessert topped with fresh fruit and cream, considered a national dish of New Zealand.",
-  "region": "New Zealand",
-  "type": "Dessert"
-},
-{
-  "id": "53",
-  "text": "Hangi is a traditional Māori method of cooking meat and vegetables in an underground oven.",
-  "region": "New Zealand",
-  "type": "Main Course"
-},
-{
-  "id": "54",
-  "text": "Palusami is a Polynesian dish of taro leaves filled with coconut cream and sometimes meat, baked in banana leaves.",
-  "region": "Samoa, South Pacific",
-  "type": "Main Course"
-},
-{
-  "id": "55",
-  "text": "Oka is a Samoan raw fish salad marinated in citrus and coconut milk, similar to ceviche.",
-  "region": "Samoa, South Pacific",
-  "type": "Appetizer"
-},
-{
-  "id": "56",
-  "text": "Lovo is a Fijian feast where food is wrapped in banana leaves and cooked in an earth oven.",
-  "region": "Fiji, South Pacific",
-  "type": "Main Course"
-}
-,
-{
-  "id": "57",
-  "text": "Kokoda is a Fijian dish of raw fish marinated in lime juice and coconut milk, similar to ceviche.",
-  "region": "Fiji, South Pacific",
-  "type": "Appetizer"
-},
-{
-  "id": "58",
-  "text": "Poke is a Hawaiian dish of diced raw fish, typically seasoned with soy sauce and sesame oil.",
-  "region": "Hawaii, USA",
-  "type": "Appetizer"
-},
-{
-  "id": "59",
-  "text": "Spam musubi is a Hawaiian snack made of rice and Spam wrapped in seaweed.",
-  "region": "Hawaii, USA",
-  "type": "Snack"
-},
-{  "id": "60",
-  "text": "Loco moco is a Hawaiian dish consisting of rice topped with a hamburger patty, fried egg, and brown gravy.",
-  "region": "Hawaii, USA",
-  "type": "Main Course"
-},
-{
-  "id": "61",
-  "text": "Sushi is a Japanese dish of vinegared rice combined with seafood, vegetables, and sometimes tropical fruits.",
-  "region": "Japan",
-  "type": "Main Course"
-},
-{
-  "id": "62",
-  "text": "Ramen is a Japanese noodle soup dish with Chinese-style wheat noodles served in a meat or fish-based broth.",
-  "region": "Japan",
-  "type": "Main Course"
-},
-{
-  "id": "63",
-  "text": "Tempura is a Japanese dish of seafood or vegetables that have been battered and deep-fried.",
-  "region": "Japan",
-  "type": "Main Course"
-},
-{
-  "id": "64",
-  "text": "Miso soup is a traditional Japanese soup consisting of a stock called dashi into which softened miso paste is mixed.",
-  "region": "Japan",
-  "type": "Soup"
-},
-{
-  "id": "65",
-  "text": "Okonomiyaki is a savory Japanese pancake containing a variety of ingredients.",
-  "region": "Japan",
-  "type": "Main Course"
-},
-{
-  "id": "66",
-  "text": "Hummus is a Middle Eastern dip or spread made from cooked, mashed chickpeas blended with tahini, olive oil, lemon juice, and garlic.",
-  "region": "Middle East",
-  "type": "Appetizer"
-},
-{
-  "id": "67",
-  "text": "Falafel consists of deep-fried balls of ground chickpeas or fava beans, typically served in pita bread.",
-  "region": "Middle East",
-  "type": "Main Course"
-},
-{
-  "id": "68",
-  "text": "Shawarma is a Middle Eastern meat preparation where thin slices of lamb, chicken, or beef are stacked and roasted on a vertical rotisserie.",
-  "region": "Middle East",
-  "type": "Main Course"
-},
-{
-  "id": "69",
-  "text": "Tabbouleh is a Levantine vegetarian salad made of finely chopped parsley, tomatoes, mint, and bulgur.",
-  "region": "Middle East",
-  "type": "Salad"
-},
-{
-  "id": "70",
-  "text": "Baklava is a rich, sweet dessert pastry made of layers of filo filled with chopped nuts and sweetened with syrup or honey.",
-  "region": "Middle East",
-  "type": "Dessert"
-},
-{
-  "id": "71",
-  "text": "Buuz are Mongolian steamed dumplings filled with minced meat, typically mutton or beef.",
-  "region": "Mongolia",
-  "type": "Main Course"
-},
-{
-  "id": "72",
-  "text": "Khorkhog is a Mongolian barbecue dish where meat is cooked with hot stones inside a sealed container.",
-  "region": "Mongolia",
-  "type": "Main Course"
-},
-{
-  "id": "73",
-  "text": "Airag is a traditional Mongolian alcoholic drink made from fermented mare's milk.",
-  "region": "Mongolia",
-  "type": "Beverage"
-},
-{
-  "id": "74",
-  "text": "Boortsog are Mongolian deep-fried cookies often served with tea or used as a dessert.",
-  "region": "Mongolia",
-  "type": "Dessert"
-},
-{
-  "id": "75",
-  "text": "Suutei tsai is a traditional Mongolian milk tea made with green tea, milk, water, and salt.",
-  "region": "Mongolia",
-  "type": "Beverage"
-}
+    "id": "29",
+    "text": "Sweet and sour pork is a Chinese dish with crispy pork pieces in a tangy sauce with pineapple and peppers.",
+    "region": "China",
+    "type": "Main Course"
+  },
+  {
+    "id": "30",
+    "text": "Ma la hot pot is a spicy Sichuan-style Chinese hot pot with numbing mala spices.",
+    "region": "China",
+    "type": "Main Course"
+  },
+  {
+    "id": "31",
+    "text": "Sushi is a Japanese dish of vinegared rice combined with seafood, vegetables, and sometimes tropical fruits.",
+    "region": "Japan",
+    "type": "Main Course"
+  },
+  {
+    "id": "32",
+    "text": "Ramen is a Japanese noodle soup dish with Chinese-style wheat noodles served in a meat or fish-based broth.",
+    "region": "Japan",
+    "type": "Main Course"
+  },
+  {
+    "id": "33",
+    "text": "Tempura is a Japanese dish of seafood or vegetables that have been battered and deep-fried.",
+    "region": "Japan",
+    "type": "Main Course"
+  },
+  {
+    "id": "34",
+    "text": "Miso soup is a traditional Japanese soup consisting of a stock called dashi into which softened miso paste is mixed.",
+    "region": "Japan",
+    "type": "Soup"
+  },
+  {
+    "id": "35",
+    "text": "Okonomiyaki is a savory Japanese pancake containing a variety of ingredients.",
+    "region": "Japan",
+    "type": "Main Course"
+  },
+  {
+    "id": "36",
+    "text": "Yakitori is grilled chicken skewers with tare sauce, a popular Japanese street food.",
+    "region": "Japan",
+    "type": "Snack"
+  },
+  {
+    "id": "37",
+    "text": "Udon is a type of thick wheat flour noodle served hot or cold in Japanese cuisine.",
+    "region": "Japan",
+    "type": "Main Course"
+  },
+  {
+    "id": "38",
+    "text": "Takoyaki are ball-shaped Japanese snacks made of wheat flour batter and cooked with octopus pieces.",
+    "region": "Japan",
+    "type": "Snack"
+  },
+  {
+    "id": "39",
+    "text": "Mochi is a Japanese rice cake made from glutinous rice pounded into paste and molded.",
+    "region": "Japan",
+    "type": "Dessert"
+  },
+  {
+    "id": "40",
+    "text": "Tonkatsu is a Japanese dish of breaded, deep-fried pork cutlet served with shredded cabbage.",
+    "region": "Japan",
+    "type": "Main Course"
+  },
+  {
+    "id": "41",
+    "text": "Kimchi is a traditional Korean side dish made from fermented vegetables, usually cabbage and radish, with chili pepper and garlic.",
+    "region": "Korea",
+    "type": "Side Dish"
+  },
+  {
+    "id": "42",
+    "text": "Bibimbap is a Korean mixed rice dish topped with sautéed vegetables, sliced meat, a fried egg, and chili paste.",
+    "region": "Korea",
+    "type": "Main Course"
+  },
+  {
+    "id": "43",
+    "text": "Tteokbokki is a popular Korean street food made of chewy rice cakes in a spicy red sauce.",
+    "region": "Korea",
+    "type": "Snack"
+  },
+  {
+    "id": "44",
+    "text": "Bulgogi is a Korean grilled marinated beef dish that is sweet and savory.",
+    "region": "Korea",
+    "type": "Main Course"
+  },
+  {
+    "id": "45",
+    "text": "Samgyeopsal is Korean grilled pork belly served with lettuce wraps and various side dishes.",
+    "region": "Korea",
+    "type": "Main Course"
+  },
+  {
+    "id": "46",
+    "text": "Japchae is a Korean stir-fried dish made with sweet potato noodles, vegetables, and sometimes meat.",
+    "region": "Korea",
+    "type": "Side Dish"
+  },
+  {
+    "id": "47",
+    "text": "Korean fried chicken is crispy chicken with a sweet and spicy glaze, often served with pickled radish.",
+    "region": "Korea",
+    "type": "Main Course"
+  },
+  {
+    "id": "48",
+    "text": "Sundubu jjigae is a Korean soft tofu stew with seafood, vegetables, and spicy broth.",
+    "region": "Korea",
+    "type": "Soup"
+  },
+  {
+    "id": "49",
+    "text": "Hotteok is a Korean sweet pancake filled with brown sugar, honey, chopped peanuts, and cinnamon.",
+    "region": "Korea",
+    "type": "Dessert"
+  },
+  {
+    "id": "50",
+    "text": "Makgeolli is a traditional Korean alcoholic beverage made from rice, wheat, or barley.",
+    "region": "Korea",
+    "type": "Beverage"
+  },
+  {
+    "id": "51",
+    "text": "Pad Thai is a stir-fried noodle dish with shrimp, peanuts, and tamarind sauce, one of Thailand's national dishes.",
+    "region": "Thailand",
+    "type": "Main Course"
+  },
+  {
+    "id": "52",
+    "text": "Tom Yum is a hot and sour Thai soup made with shrimp, lemongrass, and lime juice.",
+    "region": "Thailand",
+    "type": "Soup"
+  },
+  {
+    "id": "53",
+    "text": "Green curry is a spicy Thai curry made with green chilies, coconut milk, and Thai basil.",
+    "region": "Thailand",
+    "type": "Main Course"
+  },
+  {
+    "id": "54",
+    "text": "Massaman curry is a rich, sweet Thai curry with Persian influences, often made with beef or chicken.",
+    "region": "Thailand",
+    "type": "Main Course"
+  },
+  {
+    "id": "55",
+    "text": "Som tam is a spicy Thai salad made from shredded green papaya, tomatoes, and peanuts.",
+    "region": "Thailand",
+    "type": "Salad"
+  },
+  {
+    "id": "56",
+    "text": "Mango sticky rice is a traditional Thai dessert made with glutinous rice, fresh mango slices, and coconut milk.",
+    "region": "Thailand",
+    "type": "Dessert"
+  },
+  {
+    "id": "57",
+    "text": "Pad kra pao is a Thai stir-fry dish with minced meat, Thai basil, and chilies, served over rice.",
+    "region": "Thailand",
+    "type": "Main Course"
+  },
+  {
+    "id": "58",
+    "text": "Tom kha gai is a creamy Thai coconut chicken soup with galangal, lemongrass, and lime leaves.",
+    "region": "Thailand",
+    "type": "Soup"
+  },
+  {
+    "id": "59",
+    "text": "Thai iced tea is a sweet, creamy beverage made from strongly brewed tea, sugar, and condensed milk.",
+    "region": "Thailand",
+    "type": "Beverage"
+  },
+  {
+    "id": "60",
+    "text": "Larb is a spicy Thai meat salad made with minced pork or beef, herbs, and lime juice.",
+    "region": "Thailand",
+    "type": "Salad"
+  },
+  {
+    "id": "61",
+    "text": "Pho is a Vietnamese noodle soup consisting of broth, rice noodles, herbs, and meat.",
+    "region": "Vietnam",
+    "type": "Soup"
+  },
+  {
+    "id": "62",
+    "text": "Banh mi is a Vietnamese sandwich made with a French baguette filled with various meats, vegetables, and sauces.",
+    "region": "Vietnam",
+    "type": "Sandwich"
+  },
+  {
+    "id": "63",
+    "text": "Spring rolls are fresh Vietnamese rolls made with rice paper, filled with shrimp, herbs, and vegetables.",
+    "region": "Vietnam",
+    "type": "Appetizer"
+  },
+  {
+    "id": "64",
+    "text": "Bun cha is a Vietnamese dish of grilled pork and noodles served with dipping sauce and fresh herbs.",
+    "region": "Vietnam",
+    "type": "Main Course"
+  },
+  {
+    "id": "65",
+    "text": "Cao lau is a Vietnamese noodle dish from Hoi An with thick noodles, pork, and crispy wontons.",
+    "region": "Vietnam",
+    "type": "Main Course"
+  },
+  {
+    "id": "66",
+    "text": "Vietnamese coffee is a strong coffee served with condensed milk, often over ice.",
+    "region": "Vietnam",
+    "type": "Beverage"
+  },
+  {
+    "id": "67",
+    "text": "Bánh xèo is a Vietnamese savory pancake made with rice flour, coconut milk, and turmeric.",
+    "region": "Vietnam",
+    "type": "Main Course"
+  },
+  {
+    "id": "68",
+    "text": "Hu tieu is a Vietnamese noodle soup with pork, seafood, and a clear broth.",
+    "region": "Vietnam",
+    "type": "Soup"
+  },
+  {
+    "id": "69",
+    "text": "Com tam is Vietnamese broken rice served with grilled pork, egg, and pickled vegetables.",
+    "region": "Vietnam",
+    "type": "Main Course"
+  },
+  {
+    "id": "70",
+    "text": "Che ba mau is a Vietnamese dessert with layers of beans, jelly, and coconut milk over ice.",
+    "region": "Vietnam",
+    "type": "Dessert"
+  },
+  {
+    "id": "71",
+    "text": "Nasi Goreng is Indonesian-style fried rice often cooked with kecap manis, garlic, shallots, and chili.",
+    "region": "Indonesia",
+    "type": "Main Course"
+  },
+  {
+    "id": "72",
+    "text": "Rendang is a spicy meat dish slow-cooked in coconut milk and spices, originating from Indonesia.",
+    "region": "Indonesia",
+    "type": "Main Course"
+  },
+  {
+    "id": "73",
+    "text": "Satay is Indonesian grilled meat skewers served with peanut sauce.",
+    "region": "Indonesia",
+    "type": "Snack"
+  },
+  {
+    "id": "74",
+    "text": "Gado-gado is an Indonesian salad of mixed vegetables served with peanut sauce.",
+    "region": "Indonesia",
+    "type": "Salad"
+  },
+  {
+    "id": "75",
+    "text": "Mie ayam is Indonesian chicken noodle soup with yellow noodles and seasoned chicken.",
+    "region": "Indonesia",
+    "type": "Main Course"
+  },
+  {
+    "id": "76",
+    "text": "Gudeg is a traditional Indonesian sweet stew made from young jackfruit with palm sugar and coconut milk.",
+    "region": "Indonesia",
+    "type": "Main Course"
+  },
+  {
+    "id": "77",
+    "text": "Soto ayam is an Indonesian chicken soup with turmeric, served with rice and various condiments.",
+    "region": "Indonesia",
+    "type": "Soup"
+  },
+  {
+    "id": "78",
+    "text": "Bakso is Indonesian meatball soup served with noodles and vegetables in a savory broth.",
+    "region": "Indonesia",
+    "type": "Soup"
+  },
+  {
+    "id": "79",
+    "text": "Martabak is Indonesian stuffed pancake with either sweet or savory fillings.",
+    "region": "Indonesia",
+    "type": "Snack"
+  },
+  {
+    "id": "80",
+    "text": "Es cendol is an Indonesian dessert drink made with rice flour jelly, coconut milk, and palm sugar syrup.",
+    "region": "Indonesia",
+    "type": "Dessert"
+  },
+  {
+    "id": "81",
+    "text": "Nasi lemak is Malaysia's national dish consisting of fragrant rice cooked in coconut milk, served with sambal, anchovies, and egg.",
+    "region": "Malaysia",
+    "type": "Main Course"
+  },
+  {
+    "id": "82",
+    "text": "Char kway teow is a Malaysian stir-fried flat rice noodle dish with soy sauce, prawns, and bean sprouts.",
+    "region": "Malaysia",
+    "type": "Main Course"
+  },
+  {
+    "id": "83",
+    "text": "Laksa is a spicy Malaysian noodle soup with coconut milk and curry or tamarind broth.",
+    "region": "Malaysia",
+    "type": "Soup"
+  },
+  {
+    "id": "84",
+    "text": "Hainanese chicken rice is a Malaysian dish of poached chicken served with fragrant rice.",
+    "region": "Malaysia",
+    "type": "Main Course"
+  },
+  {
+    "id": "85",
+    "text": "Roti canai is a Malaysian flatbread served with curry or sugar, popular for breakfast.",
+    "region": "Malaysia",
+    "type": "Bread"
+  },
+  {
+    "id": "86",
+    "text": "Cendol is a Malaysian dessert with green rice flour jelly, coconut milk, and gula melaka.",
+    "region": "Malaysia",
+    "type": "Dessert"
+  },
+  {
+    "id": "87",
+    "text": "Bak kut teh is a Malaysian pork rib soup cooked with herbs and spices.",
+    "region": "Malaysia",
+    "type": "Soup"
+  },
+  {
+    "id": "88",
+    "text": "Assam laksa is a sour, fish-based Malaysian soup noodle from Penang.",
+    "region": "Malaysia",
+    "type": "Soup"
+  },
+  {
+    "id": "89",
+    "text": "Teh tarik is Malaysian pulled tea made with black tea and condensed milk.",
+    "region": "Malaysia",
+    "type": "Beverage"
+  },
+  {
+    "id": "90",
+    "text": "Kuih is a variety of Malaysian bite-sized snacks and desserts, often colorful and sweet.",
+    "region": "Malaysia",
+    "type": "Dessert"
+  },
+  {
+    "id": "91",
+    "text": "Adobo is a Filipino dish made by marinating meat in vinegar, soy sauce, and garlic, then simmering it.",
+    "region": "Philippines",
+    "type": "Main Course"
+  },
+  {
+    "id": "92",
+    "text": "Halo-halo is a Filipino dessert made from crushed ice, evaporated milk, and mixed ingredients like sweet beans, fruits, and jellies.",
+    "region": "Philippines",
+    "type": "Dessert"
+  },
+  {
+    "id": "93",
+    "text": "Lechon is a Filipino roasted pig dish, often served during special occasions.",
+    "region": "Philippines",
+    "type": "Main Course"
+  },
+  {
+    "id": "94",
+    "text": "Sinigang is a Filipino sour soup made with tamarind, tomatoes, and various meats or seafood.",
+    "region": "Philippines",
+    "type": "Soup"
+  },
+  {
+    "id": "95",
+    "text": "Lumpia is a Filipino spring roll filled with vegetables, meat, or seafood.",
+    "region": "Philippines",
+    "type": "Appetizer"
+  },
+  {
+    "id": "96",
+    "text": "Pancit is a Filipino stir-fried noodle dish with vegetables and meat or seafood.",
+    "region": "Philippines",
+    "type": "Main Course"
+  },
+  {
+    "id": "97",
+    "text": "Bibingka is a Filipino rice cake traditionally eaten during Christmas season.",
+    "region": "Philippines",
+    "type": "Dessert"
+  },
+  {
+    "id": "98",
+    "text": "Kare-kare is a Filipino stew made with oxtail and vegetables in peanut sauce.",
+    "region": "Philippines",
+    "type": "Main Course"
+  },
+  {
+    "id": "99",
+    "text": "Balut is a Filipino delicacy of fertilized duck egg incubated and boiled.",
+    "region": "Philippines",
+    "type": "Snack"
+  },
+  {
+    "id": "100",
+    "text": "Taho is a Filipino sweet snack made of soft tofu, arnibal syrup, and sago pearls.",
+    "region": "Philippines",
+    "type": "Snack"
+  },
+  {
+    "id": "101",
+    "text": "Pasta carbonara is an Italian dish made with eggs, cheese, pancetta, and black pepper.",
+    "region": "Italy",
+    "type": "Main Course"
+  },
+  {
+    "id": "102",
+    "text": "Risotto is a Northern Italian rice dish cooked with broth until it reaches a creamy consistency.",
+    "region": "Italy",
+    "type": "Main Course"
+  },
+  {
+    "id": "103",
+    "text": "Pizza margherita is a traditional Neapolitan pizza topped with tomatoes, mozzarella, and fresh basil.",
+    "region": "Italy",
+    "type": "Main Course"
+  },
+  {
+    "id": "104",
+    "text": "Gelato is Italian ice cream made with milk, sugar, and various flavorings, denser than regular ice cream.",
+    "region": "Italy",
+    "type": "Dessert"
+  },
+  {
+    "id": "105",
+    "text": "Tiramisu is an Italian dessert made of ladyfingers dipped in coffee, layered with mascarpone and cocoa.",
+    "region": "Italy",
+    "type": "Dessert"
+  },
+  {
+    "id": "106",
+    "text": "Osso buco is an Italian braised veal shanks dish cooked with vegetables, white wine, and broth.",
+    "region": "Italy",
+    "type": "Main Course"
+  },
+  {
+    "id": "107",
+    "text": "Minestrone is a thick Italian soup made with vegetables, beans, and pasta or rice.",
+    "region": "Italy",
+    "type": "Soup"
+  },
+  {
+    "id": "108",
+    "text": "Parmigiana is an Italian dish of eggplant layered with cheese and tomato sauce, then baked.",
+    "region": "Italy",
+    "type": "Main Course"
+  },
+  {
+    "id": "109",
+    "text": "Cannoli are Italian pastry desserts filled with sweet ricotta cheese and chocolate chips.",
+    "region": "Italy",
+    "type": "Dessert"
+  },
+  {
+    "id": "110",
+    "text": "Antipasti is an Italian appetizer platter featuring cured meats, cheeses, olives, and vegetables.",
+    "region": "Italy",
+    "type": "Appetizer"
+  },
+  {
+    "id": "111",
+    "text": "Coq au vin is a French dish of chicken braised with wine, typically red wine from Burgundy.",
+    "region": "France",
+    "type": "Main Course"
+  },
+  {
+    "id": "112",
+    "text": "Bouillabaisse is a traditional Provençal fish stew originating from the port city of Marseille.",
+    "region": "France",
+    "type": "Soup"
+  },
+  {
+    "id": "113",
+    "text": "Croissant is a buttery, flaky, viennoiserie pastry that originated in France.",
+    "region": "France",
+    "type": "Breakfast"
+  },
+  {
+    "id": "114",
+    "text": "Crème brûlée is a French dessert consisting of rich custard topped with caramelized sugar.",
+    "region": "France",
+    "type": "Dessert"
+  },
+  {
+    "id": "115",
+    "text": "Ratatouille is a French stewed vegetable dish from Nice, made with eggplant, zucchini, and tomatoes.",
+    "region": "France",
+    "type": "Side Dish"
+  },
+  {
+    "id": "116",
+    "text": "French onion soup is a classic French soup made with caramelized onions and beef stock, topped with cheese.",
+    "region": "France",
+    "type": "Soup"
+  },
+  {
+    "id": "117",
+    "text": "Escargot is a French delicacy of cooked snails, typically prepared with garlic and parsley butter.",
+    "region": "France",
+    "type": "Appetizer"
+  },
+  {
+    "id": "118",
+    "text": "Boeuf bourguignon is a French beef stew braised in red wine with vegetables and herbs.",
+    "region": "France",
+    "type": "Main Course"
+  },
+  {
+    "id": "119",
+    "text": "Macarons are French sandwich cookies made with almond flour, filled with ganache or buttercream.",
+    "region": "France",
+    "type": "Dessert"
+  },
+  {
+    "id": "120",
+    "text": "Quiche Lorraine is a French savory tart with eggs, cream, and bacon baked in a pastry crust.",
+    "region": "France",
+    "type": "Main Course"
+  },
+  {
+    "id": "121",
+    "text": "Paella is a Spanish rice dish originally from Valencia, cooked with saffron and various meats or seafood.",
+    "region": "Spain",
+    "type": "Main Course"
+  },
+  {
+    "id": "122",
+    "text": "Tapas are a variety of small Spanish appetizers that can be served hot or cold.",
+    "region": "Spain",
+    "type": "Appetizer"
+  },
+  {
+    "id": "123",
+    "text": "Gazpacho is a cold Spanish soup made primarily from tomatoes, peppers, and cucumbers.",
+    "region": "Spain",
+    "type": "Soup"
+  },
+  {
+    "id": "124",
+    "text": "Jamón ibérico is a type of cured Spanish ham produced from free-range Iberian pigs.",
+    "region": "Spain",
+    "type": "Appetizer"
+  },
+  {
+    "id": "125",
+    "text": "Churros are Spanish fried-dough pastries dusted with cinnamon sugar, often served with chocolate.",
+    "region": "Spain",
+    "type": "Dessert"
+  },
+  {
+    "id": "126",
+    "text": "Patatas bravas are Spanish fried potato cubes served with spicy tomato sauce and aioli.",
+    "region": "Spain",
+    "type": "Appetizer"
+  },
+  {
+    "id": "127",
+    "text": "Tortilla española is a Spanish omelet made with eggs, potatoes, and sometimes onions.",
+    "region": "Spain",
+    "type": "Main Course"
+  },
+  {
+    "id": "128",
+    "text": "Fabada asturiana is a rich Spanish bean stew from Asturias with sausage and pork.",
+    "region": "Spain",
+    "type": "Main Course"
+  },
+  {
+    "id": "129",
+    "text": "Flan is a Spanish caramel custard dessert with a layer of soft caramel on top.",
+    "region": "Spain",
+    "type": "Dessert"
+  },
+  {
+    "id": "130",
+    "text": "Sangria is a Spanish alcoholic beverage made with red wine, chopped fruit, and sometimes brandy.",
+    "region": "Spain",
+    "type": "Beverage"
+  },
+  {
+    "id": "131",
+    "text": "Fish and chips is a British dish of battered deep-fried fish served with chips (french fries).",
+    "region": "United Kingdom",
+    "type": "Main Course"
+  },
+  {
+    "id": "132",
+    "text": "Bangers and mash is a British dish of sausages served with mashed potatoes and onion gravy.",
+    "region": "United Kingdom",
+    "type": "Main Course"
+  },
+  {
+    "id": "133",
+    "text": "Shepherd's pie is a British dish made with minced lamb and vegetables topped with mashed potato.",
+    "region": "United Kingdom",
+    "type": "Main Course"
+  },
+  {
+    "id": "134",
+    "text": "Yorkshire pudding is a British baked pudding made from batter, traditionally served with roast beef.",
+    "region": "United Kingdom",
+    "type": "Side Dish"
+  },
+  {
+    "id": "135",
+    "text": "Haggis is a traditional Scottish dish containing sheep's pluck mixed with onion, oatmeal, and spices.",
+    "region": "United Kingdom",
+    "type": "Main Course"
+  },
+  {
+    "id": "136",
+    "text": "Full English breakfast includes bacon, eggs, sausages, baked beans, toast, and grilled tomatoes.",
+    "region": "United Kingdom",
+    "type": "Breakfast"
+  },
+  {
+    "id": "137",
+    "text": "Beef Wellington is a British dish of beef tenderloin coated with pâté and wrapped in puff pastry.",
+    "region": "United Kingdom",
+    "type": "Main Course"
+  },
+  {
+    "id": "138",
+    "text": "Sticky toffee pudding is a British dessert consisting of sponge cake with toffee sauce.",
+    "region": "United Kingdom",
+    "type": "Dessert"
+  },
+  {
+    "id": "139",
+    "text": "Cornish pasty is a British pastry filled with beef, vegetables, and gravy, originally from Cornwall.",
+    "region": "United Kingdom",
+    "type": "Snack"
+  },
+  {
+    "id": "140",
+    "text": "Earl Grey tea is a British tea blend flavored with oil of bergamot.",
+    "region": "United Kingdom",
+    "type": "Beverage"
+  },
+  {
+    "id": "141",
+    "text": "Bratwurst is a German sausage made from pork or beef, typically grilled or pan-fried.",
+    "region": "Germany",
+    "type": "Main Course"
+  },
+  {
+    "id": "142",
+    "text": "Sauerbraten is a traditional German roast of heavily marinated meat, usually beef.",
+    "region": "Germany",
+    "type": "Main Course"
+  },
+  {
+    "id": "143",
+    "text": "Pretzel is a type of baked bread product made from dough twisted into a distinctive knot-like shape.",
+    "region": "Germany",
+    "type": "Snack"
+  },
+  {
+    "id": "144",
+    "text": "Black Forest cake is a German chocolate cake with cherries and whipped cream.",
+    "region": "Germany",
+    "type": "Dessert"
+  },
+  {
+    "id": "145",
+    "text": "Schnitzel is a German breaded, pan-fried cutlet of meat, traditionally veal.",
+    "region": "Germany",
+    "type": "Main Course"
+  },
+  {
+    "id": "146",
+    "text": "Sauerkraut is fermented cabbage commonly used as a German side dish or condiment.",
+    "region": "Germany",
+    "type": "Side Dish"
+  },
+  {
+    "id": "147",
+    "text": "Spätzle are German soft egg noodles, often served with cheese or as a side dish.",
+    "region": "Germany",
+    "type": "Side Dish"
+  },
+  {
+    "id": "148",
+    "text": "Currywurst is a German fast food dish of steamed, then fried pork sausage with curry ketchup.",
+    "region": "Germany",
+    "type": "Snack"
+  },
+  {
+    "id": "149",
+    "text": "Apfelstrudel is a German pastry filled with apples, sugar, cinnamon, and breadcrumbs.",
+    "region": "Germany",
+    "type": "Dessert"
+  },
+  {
+    "id": "150",
+    "text": "German beer is brewed according to the Reinheitsgebot purity law, using only hops, malt, and water.",
+    "region": "Germany",
+    "type": "Beverage"
+  },
+  {
+    "id": "151",
+    "text": "Tacos are a traditional Mexican dish consisting of a corn or wheat tortilla folded around a filling.",
+    "region": "Mexico",
+    "type": "Main Course"
+  },
+  {
+    "id": "152",
+    "text": "Guacamole is a Mexican avocado-based dip seasoned with lime juice, salt, and various spices.",
+    "region": "Mexico",
+    "type": "Dip"
+  },
+  {
+    "id": "153",
+    "text": "Enchiladas are Mexican corn tortillas rolled around a filling and covered with a savory sauce.",
+    "region": "Mexico",
+    "type": "Main Course"
+  },
+  {
+    "id": "154",
+    "text": "Mole is a traditional Mexican sauce containing chocolate and various spices.",
+    "region": "Mexico",
+    "type": "Sauce"
+  },
+  {
+    "id": "155",
+    "text": "Quesadillas are Mexican tortillas filled with cheese and other ingredients, then grilled.",
+    "region": "Mexico",
+    "type": "Snack"
+  },
+  {
+    "id": "156",
+    "text": "Pozole is a Mexican soup made with hominy, meat, and red or green chili pepper-based broth.",
+    "region": "Mexico",
+    "type": "Soup"
+  },
+  {
+    "id": "157",
+    "text": "Tamales are Mexican steamed masa dough filled with meats, cheeses, or vegetables, wrapped in corn husks.",
+    "region": "Mexico",
+    "type": "Main Course"
+  },
+  {
+    "id": "158",
+    "text": "Ceviche is a Mexican dish of fresh raw fish marinated in citrus juices and spiced with chili peppers.",
+    "region": "Mexico",
+    "type": "Appetizer"
+  },
+  {
+    "id": "159",
+    "text": "Tres leches cake is a Mexican sponge cake soaked in three kinds of milk.",
+    "region": "Mexico",
+    "type": "Dessert"
+  },
+  {
+    "id": "160",
+    "text": "Horchata is a Mexican sweet drink made from rice, cinnamon, and vanilla.",
+    "region": "Mexico",
+    "type": "Beverage"
+  },
+  {
+    "id": "161",
+    "text": "Hamburger is an American sandwich consisting of a cooked patty of ground meat in a sliced bun.",
+    "region": "United States",
+    "type": "Main Course"
+  },
+  {
+    "id": "162",
+    "text": "BBQ ribs are American-style pork ribs cooked low and slow with barbecue sauce.",
+    "region": "United States",
+    "type": "Main Course"
+  },
+  {
+    "id": "163",
+    "text": "Mac and cheese is an American dish of cooked macaroni pasta and cheese sauce.",
+    "region": "United States",
+    "type": "Main Course"
+  },
+  {
+    "id": "164",
+    "text": "Apple pie is a traditional American dessert with apple filling in a pastry crust.",
+    "region": "United States",
+    "type": "Dessert"
+  },
+  {
+    "id": "165",
+    "text": "Clam chowder is a thick American soup containing clams, vegetables, and cream or broth.",
+    "region": "United States",
+    "type": "Soup"
+  },
+  {
+    "id": "166",
+    "text": "Hot dogs are American grilled or steamed sausages served in a sliced bun with various toppings.",
+    "region": "United States",
+    "type": "Snack"
+  },
+  {
+    "id": "167",
+    "text": "Buffalo wings are American chicken wings coated in hot sauce and served with blue cheese dressing.",
+    "region": "United States",
+    "type": "Appetizer"
+  },
+  {
+    "id": "168",
+    "text": "Pancakes are American flat cakes made from batter and cooked on a griddle, served with syrup.",
+    "region": "United States",
+    "type": "Breakfast"
+  },
+  {
+    "id": "169",
+    "text": "Cheesecake is an American sweet dessert made with cream cheese on a graham cracker crust.",
+    "region": "United States",
+    "type": "Dessert"
+  },
+  {
+    "id": "170",
+    "text": "Coca-Cola is an American carbonated soft drink that originated in Atlanta, Georgia.",
+    "region": "United States",
+    "type": "Beverage"
+  },
+  {
+    "id": "171",
+    "text": "Poutine is a Canadian dish of french fries topped with cheese curds and brown gravy.",
+    "region": "Canada",
+    "type": "Snack"
+  },
+  {
+    "id": "172",
+    "text": "Maple syrup is a Canadian syrup made from the sap of maple trees, often used on pancakes.",
+    "region": "Canada",
+    "type": "Condiment"
+  },
+  {
+    "id": "173",
+    "text": "Tourtière is a traditional French-Canadian meat pie typically served during holidays.",
+    "region": "Canada",
+    "type": "Main Course"
+  },
+  {
+    "id": "174",
+    "text": "Butter tarts are Canadian pastries filled with butter, sugar, and eggs.",
+    "region": "Canada",
+    "type": "Dessert"
+  },
+  {
+    "id": "175",
+    "text": "Montreal bagels are Canadian bagels that are smaller, denser, and sweeter than New York bagels.",
+    "region": "Canada",
+    "type": "Bread"
+  },
+  {
+    "id": "176",
+    "text": "Nanaimo bars are Canadian no-bake squares with a coconut base, custard middle, and chocolate top.",
+    "region": "Canada",
+    "type": "Dessert"
+  },
+  {
+    "id": "177",
+    "text": "Split pea soup is a Canadian soup made from dried split peas, often with ham or bacon.",
+    "region": "Canada",
+    "type": "Soup"
+  },
+  {
+    "id": "178",
+    "text": "Bannock is traditional Canadian fried bread, originally made by Indigenous peoples.",
+    "region": "Canada",
+    "type": "Bread"
+  },
+  {
+    "id": "179",
+    "text": "Canadian bacon is back bacon that is sweet, lean, and typically served at breakfast.",
+    "region": "Canada",
+    "type": "Breakfast"
+  },
+  {
+    "id": "180",
+    "text": "Ice wine is a Canadian dessert wine produced from grapes that have been frozen while still on the vine.",
+    "region": "Canada",
+    "type": "Beverage"
+  },
+  {
+    "id": "181",
+    "text": "Empanadas are Argentine baked or fried pastries filled with meat, cheese, or vegetables.",
+    "region": "Argentina",
+    "type": "Snack"
+  },
+  {
+    "id": "182",
+    "text": "Asado is Argentine barbecue featuring various cuts of meat grilled over an open fire.",
+    "region": "Argentina",
+    "type": "Main Course"
+  },
+  {
+    "id": "183",
+    "text": "Dulce de leche is a sweet Argentine confection made by slowly heating milk and sugar.",
+    "region": "Argentina",
+    "type": "Dessert"
+  },
+  {
+    "id": "184",
+    "text": "Milanesa is an Argentine breaded cutlet dish similar to schnitzel, typically made with beef or chicken.",
+    "region": "Argentina",
+    "type": "Main Course"
+  },
+  {
+    "id": "185",
+    "text": "Chimichurri is an Argentine green sauce made with parsley, cilantro, garlic, and olive oil.",
+    "region": "Argentina",
+    "type": "Sauce"
+  },
+  {
+    "id": "186",
+    "text": "Choripán is an Argentine sandwich made with chorizo sausage in a crusty bread roll.",
+    "region": "Argentina",
+    "type": "Snack"
+  },
+  {
+    "id": "187",
+    "text": "Locro is a hearty Argentine stew made with corn, beans, and meat, especially popular in winter.",
+    "region": "Argentina",
+    "type": "Main Course"
+  },
+  {
+    "id": "188",
+    "text": "Alfajores are Argentine sandwich cookies filled with dulce de leche and often covered in chocolate.",
+    "region": "Argentina",
+    "type": "Dessert"
+  },
+  {
+    "id": "189",
+    "text": "Provoleta is grilled provolone cheese served as an Argentine appetizer, often with herbs.",
+    "region": "Argentina",
+    "type": "Appetizer"
+  },
+  {
+    "id": "190",
+    "text": "Malbec is a red wine variety that has become Argentina's signature wine grape.",
+    "region": "Argentina",
+    "type": "Beverage"
+  },
+  {
+    "id": "191",
+    "text": "Feijoada is a Brazilian stew of black beans with pork and sausage, served with rice.",
+    "region": "Brazil",
+    "type": "Main Course"
+  },
+  {
+    "id": "192",
+    "text": "Coxinha is a Brazilian snack of shredded chicken covered in dough, shaped into a teardrop and fried.",
+    "region": "Brazil",
+    "type": "Snack"
+  },
+  {
+    "id": "193",
+    "text": "Açaí bowl is a Brazilian dish made from frozen açaí berries blended and served with toppings.",
+    "region": "Brazil",
+    "type": "Breakfast"
+  },
+  {
+    "id": "194",
+    "text": "Brigadeiro is a Brazilian chocolate truffle made with condensed milk and chocolate powder.",
+    "region": "Brazil",
+    "type": "Dessert"
+  },
+  {
+    "id": "195",
+    "text": "Pão de açúcar is a Brazilian sweet bread roll, often served at breakfast or as a snack.",
+    "region": "Brazil",
+    "type": "Bread"
+  },
+  {
+    "id": "196",
+    "text": "Moqueca is a Brazilian seafood stew made with fish, coconut milk, peppers, and dendê oil.",
+    "region": "Brazil",
+    "type": "Main Course"
+  },
+  {
+    "id": "197",
+    "text": "Caipirinha is Brazil's national cocktail made with cachaça, sugar, and lime.",
+    "region": "Brazil",
+    "type": "Beverage"
+  },
+  {
+    "id": "198",
+    "text": "Pastel is a Brazilian fried pastry filled with various ingredients like cheese, meat, or palm hearts.",
+    "region": "Brazil",
+    "type": "Snack"
+  },
+  {
+    "id": "199",
+    "text": "Pudim de leite is a Brazilian milk pudding similar to flan, with caramelized sugar.",
+    "region": "Brazil",
+    "type": "Dessert"
+  },
+  {
+    "id": "200",
+    "text": "Guaraná is a popular Brazilian soft drink made from the guaraná fruit.",
+    "region": "Brazil",
+    "type": "Beverage"
+  },
+  {
+    "id": "201",
+    "text": "Ceviche is a Peruvian dish of fresh raw fish marinated in citrus juices and spiced with chili peppers.",
+    "region": "Peru",
+    "type": "Appetizer"
+  },
+  {
+    "id": "202",
+    "text": "Lomo saltado is a Peruvian stir-fry combining marinated strips of beef with vegetables and french fries.",
+    "region": "Peru",
+    "type": "Main Course"
+  },
+  {
+    "id": "203",
+    "text": "Inca Kola is a sweet, golden-colored Peruvian soft drink with a bubble gum-like flavor.",
+    "region": "Peru",
+    "type": "Beverage"
+  },
+  {
+    "id": "204",
+    "text": "Pisco Sour is a Peruvian cocktail made with pisco brandy, lime juice, egg white, and bitters.",
+    "region": "Peru",
+    "type": "Beverage"
+  },
+  {
+    "id": "205",
+    "text": "Anticuchos are Peruvian grilled beef heart skewers marinated in spices and vinegar.",
+    "region": "Peru",
+    "type": "Snack"
+  },
+  {
+    "id": "206",
+    "text": "Ají de gallina is a Peruvian chicken stew in a spicy, creamy yellow pepper sauce.",
+    "region": "Peru",
+    "type": "Main Course"
+  },
+  {
+    "id": "207",
+    "text": "Papa a la huancaína is a Peruvian appetizer of boiled potatoes with spicy cheese sauce.",
+    "region": "Peru",
+    "type": "Appetizer"
+  },
+  {
+    "id": "208",
+    "text": "Arroz con pollo is a Peruvian rice dish cooked with chicken, cilantro, and spices.",
+    "region": "Peru",
+    "type": "Main Course"
+  },
+  {
+    "id": "209",
+    "text": "Churros rellenos are Peruvian filled churros with dulce de leche or chocolate.",
+    "region": "Peru",
+    "type": "Dessert"
+  },
+  {
+    "id": "210",
+    "text": "Chicha morada is a Peruvian beverage made from purple corn, spices, and fruits.",
+    "region": "Peru",
+    "type": "Beverage"
+  },
+  {
+    "id": "211",
+    "text": "Meat pie is an iconic Australian dish consisting of a flaky pastry filled with minced meat and gravy.",
+    "region": "Australia",
+    "type": "Snack"
+  },
+  {
+    "id": "212",
+    "text": "Lamingtons are sponge cakes coated in chocolate and rolled in coconut, a popular Australian dessert.",
+    "region": "Australia",
+    "type": "Dessert"
+  },
+  {
+    "id": "213",
+    "text": "Vegemite is a thick, dark brown Australian food spread made from leftover brewers' yeast extract.",
+    "region": "Australia",
+    "type": "Spread"
+  },
+  {
+    "id": "214",
+    "text": "Barramundi is a popular Australian fish often grilled or pan-fried, served with lemon.",
+    "region": "Australia",
+    "type": "Main Course"
+  },
+  {
+    "id": "215",
+    "text": "Tim Tams are Australian chocolate biscuits with a chocolate cream filling and coating.",
+    "region": "Australia",
+    "type": "Dessert"
+  },
+  {
+    "id": "216",
+    "text": "Anzac biscuits are Australian oat cookies traditionally made to send to soldiers overseas.",
+    "region": "Australia",
+    "type": "Dessert"
+  },
+  {
+    "id": "217",
+    "text": "Kangaroo meat is a lean, gamey Australian protein often grilled or used in stews.",
+    "region": "Australia",
+    "type": "Main Course"
+  },
+  {
+    "id": "218",
+    "text": "Pavlova is a meringue-based dessert topped with fresh fruit and cream, claimed by both Australia and New Zealand.",
+    "region": "Australia",
+    "type": "Dessert"
+  },
+  {
+    "id": "219",
+    "text": "Damper is traditional Australian soda bread cooked in a camp oven or on coals.",
+    "region": "Australia",
+    "type": "Bread"
+  },
+  {
+    "id": "220",
+    "text": "XXXX is a popular Australian beer brand from Queensland.",
+    "region": "Australia",
+    "type": "Beverage"
+  },
+  {
+    "id": "221",
+    "text": "Pavlova is a meringue-based dessert topped with fresh fruit and cream, considered a national dish of New Zealand.",
+    "region": "New Zealand",
+    "type": "Dessert"
+  },
+  {
+    "id": "222",
+    "text": "Hangi is a traditional Māori method of cooking meat and vegetables in an underground oven.",
+    "region": "New Zealand",
+    "type": "Main Course"
+  },
+  {
+    "id": "223",
+    "text": "Fish and chips is popular in New Zealand, often made with blue cod or snapper.",
+    "region": "New Zealand",
+    "type": "Main Course"
+  },
+  {
+    "id": "224",
+    "text": "Hokey pokey ice cream is a New Zealand vanilla ice cream with small, solid lumps of honeycomb toffee.",
+    "region": "New Zealand",
+    "type": "Dessert"
+  },
+  {
+    "id": "225",
+    "text": "Green-lipped mussels are a New Zealand delicacy often steamed with white wine and garlic.",
+    "region": "New Zealand",
+    "type": "Appetizer"
+  },
+  {
+    "id": "226",
+    "text": "Kiwi fruit, though originally from China, is strongly associated with New Zealand cuisine.",
+    "region": "New Zealand",
+    "type": "Fruit"
+  },
+  {
+    "id": "227",
+    "text": "L&P (Lemon & Paeroa) is a sweet New Zealand soft drink with a lemon flavor.",
+    "region": "New Zealand",
+    "type": "Beverage"
+  },
+  {
+    "id": "228",
+    "text": "Whitebait fritters are a New Zealand delicacy made from small, transparent fish.",
+    "region": "New Zealand",
+    "type": "Main Course"
+  },
+  {
+    "id": "229",
+    "text": "Afghan biscuits are a New Zealand chocolate cookie topped with a walnut and chocolate icing.",
+    "region": "New Zealand",
+    "type": "Dessert"
+  },
+  {
+    "id": "230",
+    "text": "Sauvignon Blanc is New Zealand's signature wine, particularly from the Marlborough region.",
+    "region": "New Zealand",
+    "type": "Beverage"
+  }
 ]

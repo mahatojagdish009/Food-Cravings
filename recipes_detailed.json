@@ -1,0 +1,262 @@
+[
+  {
+    "id": "recipe_001",
+    "name": "Chicken Biryani",
+    "cuisine": "Indian",
+    "description": "Aromatic rice dish with tender chicken, fragrant spices, and saffron. A royal dish that's perfect for special occasions.",
+    "image": "https://images.unsplash.com/photo-1563379091339-03246963d25a?w=400&h=300&fit=crop",
+    "cookTime": 75,
+    "difficulty": "Medium",
+    "servings": 6,
+    "ingredients": [
+      "2 cups Basmati rice",
+      "1 kg chicken, cut into pieces",
+      "2 large onions, thinly sliced",
+      "1 cup yogurt",
+      "2 tbsp ginger-garlic paste",
+      "1 tsp red chili powder",
+      "1/2 tsp turmeric powder",
+      "1 tsp garam masala",
+      "1/2 cup mint leaves",
+      "1/2 cup coriander leaves",
+      "4-5 green cardamom pods",
+      "2 bay leaves",
+      "1 cinnamon stick",
+      "1/4 tsp saffron soaked in 1/4 cup warm milk",
+      "4 tbsp ghee",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Soak basmati rice for 30 minutes, then drain.",
+      "Marinate chicken with yogurt, ginger-garlic paste, red chili powder, turmeric, and salt for 30 minutes.",
+      "Heat ghee in a heavy-bottomed pot and fry sliced onions until golden brown. Remove and set aside.",
+      "In the same pot, add marinated chicken and cook until 80% done (about 15 minutes).",
+      "Boil water with whole spices and salt. Add rice and cook until 70% done. Drain.",
+      "Layer the partially cooked rice over chicken. Sprinkle fried onions, mint, coriander, and saffron milk.",
+      "Cover with aluminum foil, then place the lid. Cook on high heat for 3 minutes, then reduce to low heat for 45 minutes.",
+      "Turn off heat and let it rest for 10 minutes before opening. Gently mix and serve hot."
+    ],
+    "nutrition": {
+      "calories": 485,
+      "protein": "28g",
+      "carbs": "52g",
+      "fat": "18g"
+    },
+    "tags": ["spicy", "aromatic", "festive", "non-vegetarian", "rice dish"],
+    "text": "Chicken Biryani is a aromatic rice dish with tender chicken, fragrant spices, and saffron. A royal dish that's perfect for special occasions.",
+    "category": "Main Course"
+  },
+  {
+    "id": "recipe_002",
+    "name": "Pad Thai",
+    "cuisine": "Thai",
+    "description": "Thailand's most famous noodle dish with sweet, sour, and salty flavors perfectly balanced with tender shrimp and crunchy peanuts.",
+    "image": "https://images.unsplash.com/photo-1559314809-0f31657def5e?w=400&h=300&fit=crop",
+    "cookTime": 25,
+    "difficulty": "Easy",
+    "servings": 4,
+    "ingredients": [
+      "200g rice noodles (pad thai noodles)",
+      "200g shrimp, peeled and deveined",
+      "2 eggs",
+      "2 tbsp tamarind paste",
+      "2 tbsp fish sauce",
+      "2 tbsp palm sugar or brown sugar",
+      "2 tbsp vegetable oil",
+      "2 cloves garlic, minced",
+      "1/4 cup roasted peanuts, crushed",
+      "2 green onions, chopped",
+      "1 cup bean sprouts",
+      "1 lime, cut into wedges",
+      "Chili flakes (optional)"
+    ],
+    "instructions": [
+      "Soak rice noodles in warm water until soft, about 30 minutes. Drain and set aside.",
+      "Mix tamarind paste, fish sauce, and palm sugar in a small bowl to make the sauce.",
+      "Heat oil in a large wok or skillet over high heat. Add garlic and stir-fry for 30 seconds.",
+      "Add shrimp and cook until pink, about 2 minutes.",
+      "Push everything to one side and scramble eggs on the other side.",
+      "Add noodles and sauce, toss everything together for 2-3 minutes.",
+      "Add bean sprouts and green onions, stir-fry for another minute.",
+      "Serve immediately with crushed peanuts, lime wedges, and chili flakes on the side."
+    ],
+    "nutrition": {
+      "calories": 340,
+      "protein": "22g",
+      "carbs": "42g",
+      "fat": "12g"
+    },
+    "tags": ["quick", "seafood", "sweet and sour", "street food", "noodles"],
+    "text": "Pad Thai is Thailand's most famous noodle dish with sweet, sour, and salty flavors perfectly balanced with tender shrimp and crunchy peanuts.",
+    "category": "Main Course"
+  },
+  {
+    "id": "recipe_003",
+    "name": "Margherita Pizza",
+    "cuisine": "Italian",
+    "description": "Classic Neapolitan pizza with fresh tomatoes, mozzarella, and basil. Simple ingredients that create the perfect harmony of flavors.",
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop",
+    "cookTime": 90,
+    "difficulty": "Medium",
+    "servings": 4,
+    "ingredients": [
+      "500g bread flour",
+      "325ml warm water",
+      "10g salt",
+      "3g active dry yeast",
+      "2 tbsp olive oil",
+      "400g canned San Marzano tomatoes, crushed",
+      "300g fresh mozzarella cheese, torn",
+      "Fresh basil leaves",
+      "Extra virgin olive oil for drizzling",
+      "Sea salt to taste"
+    ],
+    "instructions": [
+      "Dissolve yeast in warm water and let sit for 5 minutes until foamy.",
+      "Mix flour and salt in a large bowl. Add yeast mixture and olive oil.",
+      "Knead dough for 10 minutes until smooth and elastic. Place in oiled bowl.",
+      "Cover and let rise for 1 hour until doubled in size.",
+      "Preheat oven to highest setting (usually 500°F/260°C) with pizza stone if available.",
+      "Divide dough into 4 portions. Roll each into thin circles.",
+      "Spread crushed tomatoes thinly, leaving a border for the crust.",
+      "Add torn mozzarella and bake for 8-12 minutes until crust is golden.",
+      "Remove from oven, add fresh basil, drizzle with olive oil, and season with salt."
+    ],
+    "nutrition": {
+      "calories": 420,
+      "protein": "18g",
+      "carbs": "58g",
+      "fat": "14g"
+    },
+    "tags": ["vegetarian", "classic", "cheese", "Italian", "homemade"],
+    "text": "Margherita Pizza is a classic Neapolitan pizza with fresh tomatoes, mozzarella, and basil. Simple ingredients that create the perfect harmony of flavors.",
+    "category": "Main Course"
+  },
+  {
+    "id": "recipe_004",
+    "name": "Sushi Rolls (California Roll)",
+    "cuisine": "Japanese",
+    "description": "Popular inside-out sushi roll with cucumber, avocado, and crab meat. Perfect for beginners to Japanese cuisine.",
+    "image": "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop",
+    "cookTime": 45,
+    "difficulty": "Medium",
+    "servings": 4,
+    "ingredients": [
+      "2 cups sushi rice",
+      "2 1/4 cups water",
+      "1/4 cup rice vinegar",
+      "2 tbsp sugar",
+      "1 tsp salt",
+      "4 nori (seaweed) sheets",
+      "1 cucumber, julienned",
+      "1 avocado, sliced",
+      "200g imitation crab meat",
+      "Sesame seeds for coating",
+      "Soy sauce for serving",
+      "Wasabi and pickled ginger for serving"
+    ],
+    "instructions": [
+      "Rinse sushi rice until water runs clear. Cook with water in rice cooker or pot.",
+      "Mix rice vinegar, sugar, and salt. When rice is done, fold in this mixture and cool.",
+      "Place nori sheet shiny side down on bamboo mat covered with plastic wrap.",
+      "Spread rice evenly over nori, leaving 1-inch border. Sprinkle with sesame seeds.",
+      "Flip over so nori is on top. Place cucumber, avocado, and crab in center.",
+      "Using the mat, roll tightly from bottom, pressing gently but firmly.",
+      "Wet a sharp knife and cut roll into 8 pieces, cleaning knife between cuts.",
+      "Serve with soy sauce, wasabi, and pickled ginger."
+    ],
+    "nutrition": {
+      "calories": 285,
+      "protein": "12g",
+      "carbs": "48g",
+      "fat": "6g"
+    },
+    "tags": ["seafood", "healthy", "fresh", "Japanese", "rolls"],
+    "text": "California Roll sushi with cucumber, avocado, and crab meat. Perfect for beginners to Japanese cuisine.",
+    "category": "Main Course"
+  },
+  {
+    "id": "recipe_005",
+    "name": "Beef Tacos",
+    "cuisine": "Mexican",
+    "description": "Authentic Mexican tacos with seasoned ground beef, fresh toppings, and warm tortillas. Street food at its finest.",
+    "image": "https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400&h=300&fit=crop",
+    "cookTime": 20,
+    "difficulty": "Easy",
+    "servings": 6,
+    "ingredients": [
+      "500g ground beef",
+      "12 small corn tortillas",
+      "1 onion, diced",
+      "2 cloves garlic, minced",
+      "1 tbsp chili powder",
+      "1 tsp cumin",
+      "1 tsp paprika",
+      "1/2 tsp oregano",
+      "Salt and pepper to taste",
+      "1 cup shredded lettuce",
+      "1 cup diced tomatoes",
+      "1/2 cup diced onions",
+      "1/2 cup shredded cheese",
+      "Sour cream and salsa for serving",
+      "Lime wedges"
+    ],
+    "instructions": [
+      "Heat a large skillet over medium-high heat. Cook ground beef until browned.",
+      "Add diced onion and garlic, cook until onion is translucent.",
+      "Add chili powder, cumin, paprika, oregano, salt, and pepper. Cook for 2 minutes.",
+      "Add 1/4 cup water and simmer until liquid evaporates, about 5 minutes.",
+      "Warm tortillas in a dry skillet or microwave until soft and pliable.",
+      "Fill each tortilla with beef mixture and desired toppings.",
+      "Serve immediately with lime wedges, sour cream, and salsa on the side."
+    ],
+    "nutrition": {
+      "calories": 320,
+      "protein": "24g",
+      "carbs": "22g",
+      "fat": "16g"
+    },
+    "tags": ["spicy", "quick", "street food", "Mexican", "beef"],
+    "text": "Beef Tacos are authentic Mexican tacos with seasoned ground beef, fresh toppings, and warm tortillas. Street food at its finest.",
+    "category": "Main Course"
+  },
+  {
+    "id": "recipe_006",
+    "name": "French Croissants",
+    "cuisine": "French",
+    "description": "Buttery, flaky pastries that are the pride of French baking. Requires patience but delivers incredible results.",
+    "image": "https://images.unsplash.com/photo-1555507036-ab794f4eca94?w=400&h=300&fit=crop",
+    "cookTime": 480,
+    "difficulty": "Hard",
+    "servings": 12,
+    "ingredients": [
+      "500g bread flour",
+      "10g salt",
+      "50g sugar",
+      "10g fresh yeast (or 7g dry yeast)",
+      "300ml cold milk",
+      "300g cold unsalted butter",
+      "1 egg beaten with 1 tbsp milk for egg wash"
+    ],
+    "instructions": [
+      "Mix flour, salt, sugar, and yeast. Add cold milk and knead until smooth dough forms.",
+      "Wrap dough and refrigerate for 1 hour.",
+      "Pound cold butter into a rectangle between parchment paper. Keep cold.",
+      "Roll dough into rectangle twice the size of butter. Place butter on half, fold over.",
+      "Roll out gently, fold into thirds. Wrap and chill 30 minutes. Repeat 2 more times.",
+      "Roll final dough into large rectangle. Cut into triangles.",
+      "Roll each triangle from base to tip, curve into crescent shape.",
+      "Place on lined baking sheet, proof for 2 hours until doubled.",
+      "Brush with egg wash, bake at 400°F (200°C) for 15-20 minutes until golden."
+    ],
+    "nutrition": {
+      "calories": 285,
+      "protein": "7g",
+      "carbs": "32g",
+      "fat": "15g"
+    },
+    "tags": ["buttery", "flaky", "breakfast", "French", "pastry"],
+    "text": "French Croissants are buttery, flaky pastries that are the pride of French baking. Requires patience but delivers incredible results.",
+    "category": "Breakfast"
+  }
+]
