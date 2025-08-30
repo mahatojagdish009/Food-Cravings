@@ -1,14 +1,9 @@
 import './globals.css'
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { HydrationBoundary } from '@/components/HydrationBoundary'
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter'
-})
+import InteractiveNavigation from '@/components/InteractiveNavigation'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'RAG-Food | AI-Powered Food Discovery',
@@ -43,41 +38,11 @@ export const metadata: Metadata = {
   },
 }
 
-function Navigation() {
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-orange-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="flex items-center gap-8">
-            <a href="/" className="flex items-center gap-2">
-              <div className="bg-gradient-to-r from-orange-500 to-red-500 p-2 rounded-xl">
-                <span className="text-white font-bold text-lg">🍽️</span>
-              </div>
-              <span className="font-bold text-xl bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                RAG-Food
-              </span>
-            </a>
-            
-            <div className="hidden md:flex gap-6">
-              <a href="/" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
-                Chat
-              </a>
-              <a href="/dashboard" className="text-gray-700 hover:text-orange-600 font-medium transition-colors">
-                Analytics
-              </a>
-            </div>
-          </div>
-          
-          <div className="flex items-center gap-4">
-            <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-              ✨ Online
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-}
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter'
+})
 
 export default function RootLayout({
   children,
@@ -91,7 +56,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <HydrationBoundary>
-          <Navigation />
+          <InteractiveNavigation />
           <div className="pt-20">
             {children}
           </div>

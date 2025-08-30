@@ -80,6 +80,70 @@ const sampleRecipes = [
 ];
 
 export default function HomePage() {
+  // Footer emoji click handlers
+  const handleFoodEmojiClick = (foodType: string, emoji: string) => {
+    const messages = {
+      'ramen': 'Tell me about ramen recipes!',
+      'pizza': 'Show me authentic pizza recipes',
+      'curry': 'I want to learn about curry dishes',
+      'stew': 'What are some hearty stew recipes?',
+      'soup': 'Give me comforting soup recipes'
+    };
+    
+    // Scroll to chat and pre-fill with food query
+    const chatSection = document.getElementById('ai-chat-section');
+    chatSection?.scrollIntoView({ behavior: 'smooth' });
+    
+    setTimeout(() => {
+      const chatInput = document.querySelector('textarea') as HTMLTextAreaElement;
+      if (chatInput) {
+        chatInput.value = messages[foodType as keyof typeof messages] || `Tell me about ${foodType} recipes!`;
+        chatInput.focus();
+        // Trigger React state update
+        const event = new Event('input', { bubbles: true });
+        chatInput.dispatchEvent(event);
+      }
+    }, 500);
+  };
+
+  const handleFeatureClick = (feature: string) => {
+    const actions: { [key: string]: () => void } = {
+      'AI Recipe Assistant': () => {
+        const chatSection = document.getElementById('ai-chat-section');
+        chatSection?.scrollIntoView({ behavior: 'smooth' });
+      },
+      'Global Cuisine Database': () => {
+        const recipesSection = document.getElementById('featured-recipes-section');
+        recipesSection?.scrollIntoView({ behavior: 'smooth' });
+      },
+      'Detailed Instructions': () => {
+        alert('🍳 Each recipe includes step-by-step instructions, ingredients, and cooking tips!');
+      },
+      'Nutritional Information': () => {
+        alert('🥗 Get detailed nutritional facts including calories, protein, carbs, and fats!');
+      }
+    };
+    
+    const action = actions[feature];
+    if (action) {
+      action();
+    }
+  };
+
+  const handleCuisineClick = (cuisine: string) => {
+    const chatSection = document.getElementById('ai-chat-section');
+    chatSection?.scrollIntoView({ behavior: 'smooth' });
+    
+    setTimeout(() => {
+      const chatInput = document.querySelector('textarea') as HTMLTextAreaElement;
+      if (chatInput) {
+        chatInput.value = `Show me authentic ${cuisine} recipes and cooking techniques`;
+        chatInput.focus();
+        const event = new Event('input', { bubbles: true });
+        chatInput.dispatchEvent(event);
+      }
+    }, 500);
+  };
   const handleSendMessage = async (message: string) => {
     try {
       const response = await fetch('/api/chat', {
@@ -232,32 +296,125 @@ export default function HomePage() {
                 AI-powered culinary explorer bringing you authentic recipes and cooking wisdom from around the globe.
               </p>
               <div className="flex space-x-4">
-                <span className="text-2xl">🍜</span>
-                <span className="text-2xl">🍕</span>
-                <span className="text-2xl">🍛</span>
-                <span className="text-2xl">🥘</span>
-                <span className="text-2xl">🍲</span>
+                <button 
+                  onClick={() => handleFoodEmojiClick('ramen', '🍜')}
+                  className="text-2xl hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer hover:drop-shadow-lg"
+                  title="Find ramen recipes!"
+                >
+                  🍜
+                </button>
+                <button 
+                  onClick={() => handleFoodEmojiClick('pizza', '🍕')}
+                  className="text-2xl hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer hover:drop-shadow-lg"
+                  title="Discover pizza recipes!"
+                >
+                  🍕
+                </button>
+                <button 
+                  onClick={() => handleFoodEmojiClick('curry', '🍛')}
+                  className="text-2xl hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer hover:drop-shadow-lg"
+                  title="Explore curry dishes!"
+                >
+                  🍛
+                </button>
+                <button 
+                  onClick={() => handleFoodEmojiClick('stew', '🥘')}
+                  className="text-2xl hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer hover:drop-shadow-lg"
+                  title="Learn stew recipes!"
+                >
+                  🥘
+                </button>
+                <button 
+                  onClick={() => handleFoodEmojiClick('soup', '🍲')}
+                  className="text-2xl hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer hover:drop-shadow-lg"
+                  title="Get soup recipes!"
+                >
+                  🍲
+                </button>
               </div>
             </div>
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Features</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>AI Recipe Assistant</li>
-                <li>Global Cuisine Database</li>
-                <li>Detailed Instructions</li>
-                <li>Nutritional Information</li>
+                <li>
+                  <button 
+                    onClick={() => handleFeatureClick('AI Recipe Assistant')}
+                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
+                  >
+                    🤖 AI Recipe Assistant
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleFeatureClick('Global Cuisine Database')}
+                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
+                  >
+                    🌍 Global Cuisine Database
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleFeatureClick('Detailed Instructions')}
+                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
+                  >
+                    📋 Detailed Instructions
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleFeatureClick('Nutritional Information')}
+                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
+                  >
+                    📊 Nutritional Information
+                  </button>
+                </li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Cuisines</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Italian</li>
-                <li>Indian</li>
-                <li>Thai</li>
-                <li>Mexican</li>
-                <li>+ 18 more countries</li>
+                <li>
+                  <button 
+                    onClick={() => handleCuisineClick('Italian')}
+                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
+                  >
+                    🇮🇹 Italian
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleCuisineClick('Indian')}
+                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
+                  >
+                    🇮🇳 Indian
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleCuisineClick('Thai')}
+                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
+                  >
+                    🇹🇭 Thai
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => handleCuisineClick('Mexican')}
+                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
+                  >
+                    🇲🇽 Mexican
+                  </button>
+                </li>
+                <li>
+                  <button 
+                    onClick={() => alert('🌍 Explore 18+ more cuisines! Try asking our AI about any cuisine.')}
+                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
+                  >
+                    🌎 + 18 more countries
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
