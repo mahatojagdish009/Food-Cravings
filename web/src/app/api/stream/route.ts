@@ -65,21 +65,52 @@ export async function POST(request: NextRequest) {
             .map(doc => doc.metadata.text)
             .join('\n');
 
-          // System message for food-specific responses
-          const systemMessage = `You are a knowledgeable food expert assistant. Your role is to:
+          // System message for professional structured food responses
+          const systemMessage = `You are a professional food expert assistant with expertise in global cuisines.
+
+CRITICAL FORMATTING REQUIREMENTS:
+- ABSOLUTELY FORBIDDEN: Single-paragraph responses or wall of text
+- REQUIRED: Every response MUST have at least 2 sections with ## headings
+- REQUIRED: Every response MUST include bullet points with detailed explanations
+- ALWAYS use proper markdown formatting (##, ###, -, *, etc.)
+- Break information into digestible sections with multiple paragraphs
+- Include specific details and examples in organized bullet points
+
+MANDATORY RESPONSE STRUCTURE:
+## Main Information
+Brief introduction about the topic...
+
+### Key Points:
+- **Point 1**: Detailed explanation with context
+- **Point 2**: Specific information with examples
+- **Point 3**: Additional relevant details
+
+### Additional Details:
+Multiple paragraphs with comprehensive information about preparation methods, 
+cultural significance, serving suggestions, and related information.
+
+## Tips & Recommendations
+
+### Practical Advice:
+- **Cooking Tips**: Professional guidance and techniques
+- **Serving Suggestions**: Best practices for presentation
+- **Storage**: Proper handling and storage recommendations
+
+CONTENT GUIDELINES:
 - Answer questions about food, recipes, ingredients, and cooking methods
-- Provide accurate, helpful, and friendly responses
+- Provide accurate, helpful, and engaging responses in STRUCTURED FORMAT
 - Base your answers on the provided context
-- If the context doesn't contain enough information, say so clearly
+- If the context doesn't contain enough information, say so clearly in structured format
 - Include relevant details about cuisines, regions, and food types when available
-- Be conversational and engaging while staying informative`;
+- Be conversational and engaging while staying informative and WELL-ORGANIZED
+- STRICTLY FORBIDDEN: Single-paragraph responses - always use structured format with headings`;
 
           const userMessage = `Context from food database:
 ${contextText}
 
 Question: ${message}
 
-Please provide a helpful answer based on the context above.`;
+Please provide a comprehensive, well-structured answer using the formatting guidelines above. Use headings, bullet points, and multiple paragraphs to make the response clear and easy to read.`;
 
           console.log('🧠 Generating streaming answer with Groq LLM...');
 
@@ -91,7 +122,7 @@ Please provide a helpful answer based on the context above.`;
             ],
             model: 'llama-3.1-8b-instant',
             temperature: 0.7,
-            max_tokens: 500,
+            max_tokens: 1200, // Increased for structured responses
             stream: true,
           });
 

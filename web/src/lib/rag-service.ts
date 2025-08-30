@@ -181,7 +181,7 @@ Please provide a comprehensive, well-structured answer using the formatting guid
         ],
         model: 'llama-3.1-8b-instant', // Same model as Python version
         temperature: 0.7,
-        max_tokens: 1000, // Increased for more detailed responses
+        max_tokens: 1500, // Increased for more detailed structured responses
         stream: false, // Explicitly set to false to ensure we get ChatCompletion type
       });
 
