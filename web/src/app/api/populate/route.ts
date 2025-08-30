@@ -3,11 +3,13 @@ import { Index } from '@upstash/vector';
 import fs from 'fs';
 import path from 'path';
 
-// Initialize Upstash Vector client
-const vectorClient = new Index({
-  url: process.env.UPSTASH_VECTOR_REST_URL!,
-  token: process.env.UPSTASH_VECTOR_REST_TOKEN!,
-});
+// Lazy initialization function for vector client
+function getVectorClient() {
+  return new Index({
+    url: process.env.UPSTASH_VECTOR_REST_URL!,
+    token: process.env.UPSTASH_VECTOR_REST_TOKEN!,
+  });
+}
 
 interface FoodItem {
   id: string;
@@ -58,6 +60,7 @@ export async function POST(request: NextRequest) {
       const batch = vectors.slice(i, i + batchSize);
       
       try {
+        const vectorClient = getVectorClient();
         await vectorClient.upsert(batch);
         uploaded += batch.length;
         console.log(`✅ Uploaded batch: ${uploaded}/${vectors.length} items`);

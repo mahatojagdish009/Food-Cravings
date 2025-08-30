@@ -2,10 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import { RAGService } from '@/lib/rag-service';
 import Groq from 'groq-sdk';
 
-// Initialize Groq client for streaming
-const groqClient = new Groq({
-  apiKey: process.env.GROQ_API_KEY!,
-});
+// Lazy initialization function for Groq client
+function getGroqClient() {
+  return new Groq({
+    apiKey: process.env.GROQ_API_KEY!,
+  });
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -81,6 +83,7 @@ Please provide a helpful answer based on the context above.`;
 
           console.log('🧠 Generating streaming answer with Groq LLM...');
 
+          const groqClient = getGroqClient();
           const completion = await groqClient.chat.completions.create({
             messages: [
               { role: 'system', content: systemMessage },
