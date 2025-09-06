@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';
 import HeroSection from '@/components/HeroSection';
 import RecipeCard from '@/components/RecipeCard';
-import { EnhancedChatInterface } from '@/components/EnhancedChatInterface';
+import { SimpleChatInterface } from '@/components/SimpleChatInterface';
 
 // Sample recipes for demonstration
 const sampleRecipes = [
@@ -79,138 +79,7 @@ const sampleRecipes = [
 ];
 
 export default function HomePage() {
-  // Breadcrumb navigation state
-  const [currentSection, setCurrentSection] = React.useState('Home');
-
-  // Track which section is in view
-  React.useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            if (id === 'ai-chat-section') setCurrentSection('AI Chef');
-            else if (id === 'featured-recipes-section') setCurrentSection('Recipes');
-            else if (id.includes('stats')) setCurrentSection('Stats');
-            else setCurrentSection('Home');
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    const sections = ['ai-chat-section', 'featured-recipes-section'];
-    sections.forEach(id => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Quick action buttons
-  const quickActions = [
-    {
-      emoji: '🍕',
-      label: 'Pizza Recipes',
-      action: () => triggerSearch('Show me authentic pizza recipes from Italy')
-    },
-    {
-      emoji: '🍛',
-      label: 'Curry Dishes',
-      action: () => triggerSearch('Tell me about different curry recipes from around the world')
-    },
-    {
-      emoji: '🍜',
-      label: 'Ramen Guide',
-      action: () => triggerSearch('How to make authentic ramen from scratch')
-    },
-    {
-      emoji: '🥘',
-      label: 'Stew Recipes',
-      action: () => triggerSearch('Give me hearty stew recipes for cold weather')
-    }
-  ];
-
-  const triggerSearch = (query: string) => {
-    const chatSection = document.getElementById('ai-chat-section');
-    chatSection?.scrollIntoView({ behavior: 'smooth' });
-    
-    setTimeout(() => {
-      const chatInput = document.querySelector('textarea') as HTMLTextAreaElement;
-      if (chatInput) {
-        chatInput.value = query;
-        chatInput.focus();
-        const event = new Event('input', { bubbles: true });
-        chatInput.dispatchEvent(event);
-      }
-    }, 500);
-  };
-
-  // Footer emoji click handlers
-  const handleFoodEmojiClick = (foodType: string, emoji: string) => {
-    const messages = {
-      'ramen': 'Tell me about ramen recipes!',
-      'pizza': 'Show me authentic pizza recipes',
-      'curry': 'I want to learn about curry dishes',
-      'stew': 'What are some hearty stew recipes?',
-      'soup': 'Give me comforting soup recipes'
-    };
-    
-    // Scroll to chat and pre-fill with food query
-    const chatSection = document.getElementById('ai-chat-section');
-    chatSection?.scrollIntoView({ behavior: 'smooth' });
-    
-    setTimeout(() => {
-      const chatInput = document.querySelector('textarea') as HTMLTextAreaElement;
-      if (chatInput) {
-        chatInput.value = messages[foodType as keyof typeof messages] || `Tell me about ${foodType} recipes!`;
-        chatInput.focus();
-        // Trigger React state update
-        const event = new Event('input', { bubbles: true });
-        chatInput.dispatchEvent(event);
-      }
-    }, 500);
-  };
-
-  const handleFeatureClick = (feature: string) => {
-    const actions: { [key: string]: () => void } = {
-      'AI Recipe Assistant': () => {
-        const chatSection = document.getElementById('ai-chat-section');
-        chatSection?.scrollIntoView({ behavior: 'smooth' });
-      },
-      'Global Cuisine Database': () => {
-        const recipesSection = document.getElementById('featured-recipes-section');
-        recipesSection?.scrollIntoView({ behavior: 'smooth' });
-      },
-      'Detailed Instructions': () => {
-        alert('🍳 Each recipe includes step-by-step instructions, ingredients, and cooking tips!');
-      },
-      'Nutritional Information': () => {
-        alert('🥗 Get detailed nutritional facts including calories, protein, carbs, and fats!');
-      }
-    };
-    
-    const action = actions[feature];
-    if (action) {
-      action();
-    }
-  };
-
-  const handleCuisineClick = (cuisine: string) => {
-    const chatSection = document.getElementById('ai-chat-section');
-    chatSection?.scrollIntoView({ behavior: 'smooth' });
-    
-    setTimeout(() => {
-      const chatInput = document.querySelector('textarea') as HTMLTextAreaElement;
-      if (chatInput) {
-        chatInput.value = `Show me authentic ${cuisine} recipes and cooking techniques`;
-        chatInput.focus();
-        const event = new Event('input', { bubbles: true });
-        chatInput.dispatchEvent(event);
-      }
-    }, 500);
-  };
+  // Simple message handler
   const handleSendMessage = async (message: string) => {
     try {
       const response = await fetch('/api/chat', {
@@ -235,73 +104,15 @@ export default function HomePage() {
 
   const handleFavorite = (recipeId: string) => {
     console.log('Favoriting recipe:', recipeId);
-    // Implementation for favoriting
   };
 
   const handleSave = (recipeId: string) => {
     console.log('Saving recipe:', recipeId);
-    // Implementation for saving
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Toaster position="top-right" />
-      
-      {/* Breadcrumb Navigation */}
-      <motion.div 
-        className="fixed top-20 left-4 z-40 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-orange-100"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.5 }}
-      >
-        <div className="flex items-center gap-2 text-sm">
-          <span className="text-orange-600">📍</span>
-          <span className="text-gray-600">You're in:</span>
-          <span className="font-semibold text-orange-700">{currentSection}</span>
-        </div>
-      </motion.div>
-
-      {/* Quick Actions Floating Menu */}
-      <motion.div 
-        className="fixed bottom-6 right-6 z-40"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1 }}
-      >
-        <div className="flex flex-col gap-3">
-          {quickActions.map((action, index) => (
-            <motion.button
-              key={action.label}
-              onClick={action.action}
-              className="bg-white hover:bg-orange-50 text-gray-700 p-3 rounded-full shadow-lg border border-orange-200 hover:border-orange-300 transition-all duration-300 group"
-              whileHover={{ scale: 1.1, rotate: 10 }}
-              whileTap={{ scale: 0.9 }}
-              title={action.label}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 1.2 + index * 0.1 }}
-            >
-              <span className="text-xl group-hover:scale-110 transition-transform inline-block">
-                {action.emoji}
-              </span>
-            </motion.button>
-          ))}
-          
-          {/* Back to Top Button */}
-          <motion.button
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-all duration-300"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            title="Back to top"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.6 }}
-          >
-            <span className="text-xl">⬆️</span>
-          </motion.button>
-        </div>
-      </motion.div>
       
       {/* Hero Section */}
       <HeroSection />
@@ -333,7 +144,7 @@ export default function HomePage() {
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div>
               </div>
             }>
-              <EnhancedChatInterface onSendMessage={handleSendMessage} />
+              <SimpleChatInterface onSendMessage={handleSendMessage} />
             </Suspense>
           </div>
         </motion.section>
@@ -407,7 +218,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="col-span-2">
               <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
                 RAG Food
@@ -416,125 +227,21 @@ export default function HomePage() {
                 AI-powered culinary explorer bringing you authentic recipes and cooking wisdom from around the globe.
               </p>
               <div className="flex space-x-4">
-                <button 
-                  onClick={() => handleFoodEmojiClick('ramen', '🍜')}
-                  className="text-2xl hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer hover:drop-shadow-lg"
-                  title="Find ramen recipes!"
-                >
-                  🍜
-                </button>
-                <button 
-                  onClick={() => handleFoodEmojiClick('pizza', '🍕')}
-                  className="text-2xl hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer hover:drop-shadow-lg"
-                  title="Discover pizza recipes!"
-                >
-                  🍕
-                </button>
-                <button 
-                  onClick={() => handleFoodEmojiClick('curry', '🍛')}
-                  className="text-2xl hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer hover:drop-shadow-lg"
-                  title="Explore curry dishes!"
-                >
-                  🍛
-                </button>
-                <button 
-                  onClick={() => handleFoodEmojiClick('stew', '🥘')}
-                  className="text-2xl hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer hover:drop-shadow-lg"
-                  title="Learn stew recipes!"
-                >
-                  🥘
-                </button>
-                <button 
-                  onClick={() => handleFoodEmojiClick('soup', '🍲')}
-                  className="text-2xl hover:scale-125 hover:rotate-12 transition-all duration-300 cursor-pointer hover:drop-shadow-lg"
-                  title="Get soup recipes!"
-                >
-                  🍲
-                </button>
+                <span className="text-2xl">🍜</span>
+                <span className="text-2xl">🍕</span>
+                <span className="text-2xl">🍛</span>
+                <span className="text-2xl">🥘</span>
+                <span className="text-2xl">🍲</span>
               </div>
             </div>
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Features</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>
-                  <button 
-                    onClick={() => handleFeatureClick('AI Recipe Assistant')}
-                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
-                  >
-                    🤖 AI Recipe Assistant
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => handleFeatureClick('Global Cuisine Database')}
-                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
-                  >
-                    🌍 Global Cuisine Database
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => handleFeatureClick('Detailed Instructions')}
-                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
-                  >
-                    📋 Detailed Instructions
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => handleFeatureClick('Nutritional Information')}
-                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
-                  >
-                    📊 Nutritional Information
-                  </button>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Cuisines</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <button 
-                    onClick={() => handleCuisineClick('Italian')}
-                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
-                  >
-                    🇮🇹 Italian
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => handleCuisineClick('Indian')}
-                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
-                  >
-                    🇮🇳 Indian
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => handleCuisineClick('Thai')}
-                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
-                  >
-                    🇹🇭 Thai
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => handleCuisineClick('Mexican')}
-                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
-                  >
-                    🇲🇽 Mexican
-                  </button>
-                </li>
-                <li>
-                  <button 
-                    onClick={() => alert('🌍 Explore 18+ more cuisines! Try asking our AI about any cuisine.')}
-                    className="hover:text-orange-400 transition-colors cursor-pointer hover:translate-x-1 transform duration-200"
-                  >
-                    🌎 + 18 more countries
-                  </button>
-                </li>
+                <li>🤖 AI Recipe Assistant</li>
+                <li>🌍 Global Cuisine Database</li>
+                <li>📋 Detailed Instructions</li>
+                <li>📊 Nutritional Information</li>
               </ul>
             </div>
           </div>
