@@ -13,6 +13,7 @@ import {
   Target,
   Activity
 } from 'lucide-react';
+import HealthMonitor from './HealthMonitor';
 
 interface StatsCardProps {
   icon: React.ComponentType<any>;
@@ -139,6 +140,11 @@ export function Dashboard() {
 
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {/* Health Monitor */}
+          <div className="lg:col-span-1">
+            <HealthMonitor />
+          </div>
+
           {/* Popular Queries */}
           <div className="lg:col-span-2 bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-orange-200">
             <div className="flex items-center justify-between mb-6">
@@ -172,7 +178,7 @@ export function Dashboard() {
           </div>
 
           {/* Recent Activity */}
-          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-green-200">
+          <div className="lg:col-span-1 bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-green-200">
             <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center gap-2">
               <Clock className="h-5 w-5 text-green-500" />
               Recent Activity
