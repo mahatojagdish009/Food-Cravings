@@ -79,6 +79,74 @@ const sampleRecipes = [
 ];
 
 export default function HomePage() {
+  // Breadcrumb navigation state
+  const [currentSection, setCurrentSection] = React.useState('Home');
+
+  // Track which section is in view
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            if (id === 'ai-chat-section') setCurrentSection('AI Chef');
+            else if (id === 'featured-recipes-section') setCurrentSection('Recipes');
+            else if (id.includes('stats')) setCurrentSection('Stats');
+            else setCurrentSection('Home');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const sections = ['ai-chat-section', 'featured-recipes-section'];
+    sections.forEach(id => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Quick action buttons
+  const quickActions = [
+    {
+      emoji: '🍕',
+      label: 'Pizza Recipes',
+      action: () => triggerSearch('Show me authentic pizza recipes from Italy')
+    },
+    {
+      emoji: '🍛',
+      label: 'Curry Dishes',
+      action: () => triggerSearch('Tell me about different curry recipes from around the world')
+    },
+    {
+      emoji: '🍜',
+      label: 'Ramen Guide',
+      action: () => triggerSearch('How to make authentic ramen from scratch')
+    },
+    {
+      emoji: '🥘',
+      label: 'Stew Recipes',
+      action: () => triggerSearch('Give me hearty stew recipes for cold weather')
+    }
+  ];
+
+  const triggerSearch = (query: string) => {
+    const chatSection = document.getElementById('ai-chat-section');
+    chatSection?.scrollIntoView({ behavior: 'smooth' });
+    
+    setTimeout(() => {
+      const chatInput = document.querySelector('textarea') as HTMLTextAreaElement;
+      if (chatInput) {
+        chatInput.value = query;
+        chatInput.focus();
+        const event = new Event('input', { bubbles: true });
+        chatInput.dispatchEvent(event);
+      }
+    }, 500);
+  };
+
   // Footer emoji click handlers
   const handleFoodEmojiClick = (foodType: string, emoji: string) => {
     const messages = {
@@ -178,6 +246,62 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Toaster position="top-right" />
+      
+      {/* Breadcrumb Navigation */}
+      <motion.div 
+        className="fixed top-20 left-4 z-40 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg border border-orange-100"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.5 }}
+      >
+        <div className="flex items-center gap-2 text-sm">
+          <span className="text-orange-600">📍</span>
+          <span className="text-gray-600">You're in:</span>
+          <span className="font-semibold text-orange-700">{currentSection}</span>
+        </div>
+      </motion.div>
+
+      {/* Quick Actions Floating Menu */}
+      <motion.div 
+        className="fixed bottom-6 right-6 z-40"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1 }}
+      >
+        <div className="flex flex-col gap-3">
+          {quickActions.map((action, index) => (
+            <motion.button
+              key={action.label}
+              onClick={action.action}
+              className="bg-white hover:bg-orange-50 text-gray-700 p-3 rounded-full shadow-lg border border-orange-200 hover:border-orange-300 transition-all duration-300 group"
+              whileHover={{ scale: 1.1, rotate: 10 }}
+              whileTap={{ scale: 0.9 }}
+              title={action.label}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 1.2 + index * 0.1 }}
+            >
+              <span className="text-xl group-hover:scale-110 transition-transform inline-block">
+                {action.emoji}
+              </span>
+            </motion.button>
+          ))}
+          
+          {/* Back to Top Button */}
+          <motion.button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-all duration-300"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            title="Back to top"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.6 }}
+          >
+            <span className="text-xl">⬆️</span>
+          </motion.button>
+        </div>
+      </motion.div>
       
       {/* Hero Section */}
       <HeroSection />

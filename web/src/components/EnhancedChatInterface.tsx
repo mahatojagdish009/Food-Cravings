@@ -45,38 +45,48 @@ export function EnhancedChatInterface({ className = '', onSendMessage }: Enhance
       icon: Pizza, 
       name: 'Italian', 
       color: 'bg-red-500', 
-      queries: ['What is authentic Italian pasta?', 'Tell me about pizza origins', 'Italian cooking techniques']
+      queries: ['Authentic Italian pasta recipes', 'Classic pizza margherita guide', 'Italian cooking techniques and tips']
     },
     { 
       icon: Coffee, 
       name: 'Asian', 
-      color: 'bg-green-500', 
-      queries: ['How to make sushi rice?', 'Chinese stir-fry basics', 'Thai curry ingredients']
+      color: 'bg-orange-500', 
+      queries: ['Traditional ramen from scratch', 'Stir-fry techniques and wok cooking', 'Authentic Thai curry recipes']
     },
     { 
       icon: Cake, 
       name: 'Desserts', 
       color: 'bg-pink-500', 
-      queries: ['How to bake chocolate cake?', 'French pastry techniques', 'Ice cream flavors']
+      queries: ['French pastry techniques', 'Chocolate dessert recipes', 'Homemade ice cream guide']
     },
     { 
       icon: Fish, 
       name: 'Seafood', 
       color: 'bg-blue-500', 
-      queries: ['How to cook salmon?', 'Best fish for grilling', 'Shellfish preparation']
+      queries: ['Fresh fish cooking methods', 'Seafood pasta dishes', 'Grilled salmon techniques']
     },
     { 
       icon: Apple, 
       name: 'Healthy', 
-      color: 'bg-emerald-500', 
-      queries: ['Nutritious breakfast ideas', 'Superfoods benefits', 'Low-calorie recipes']
+      color: 'bg-green-500', 
+      queries: ['Nutritious meal prep ideas', 'Low-calorie recipe options', 'Vegetarian protein sources']
     },
     { 
       icon: Flame, 
       name: 'Spicy', 
-      color: 'bg-orange-600', 
-      queries: ['Hottest peppers in the world', 'Spicy Indian dishes', 'How to handle chili heat']
+      color: 'bg-red-600', 
+      queries: ['Spicy Indian curry recipes', 'Hot sauce making guide', 'Mexican jalapeño dishes']
     }
+  ];
+
+  // Quick starter prompts for better UX
+  const quickStarters = [
+    '🍝 Show me a quick pasta recipe',
+    '🍛 I want to learn about curry',
+    '🥗 Healthy meal ideas for today',
+    '🍕 How to make pizza dough',
+    '🍜 Authentic ramen recipe',
+    '🧁 Easy dessert for beginners'
   ];
 
   const quickSearches = [
