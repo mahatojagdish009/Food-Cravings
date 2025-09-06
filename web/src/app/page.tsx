@@ -1,11 +1,12 @@
 'use client';
 
-import React, { Suspense } from 'react';
+import React, { Suspense, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Toaster } from 'react-hot-toast';
 import HeroSection from '@/components/HeroSection';
 import RecipeCard from '@/components/RecipeCard';
-import { SimpleChatInterface } from '@/components/SimpleChatInterface';
+import { SimpleChatInterface, SimpleChatInterfaceRef } from '@/components/SimpleChatInterface';
+import InteractiveNavigation from '@/components/InteractiveNavigation';
 
 // Sample recipes for demonstration
 const sampleRecipes = [
@@ -79,6 +80,15 @@ const sampleRecipes = [
 ];
 
 export default function HomePage() {
+  const chatInterfaceRef = useRef<SimpleChatInterfaceRef>(null);
+
+  // Handler to send messages from navigation to chat
+  const handleNavigationMessage = (message: string) => {
+    if (chatInterfaceRef.current) {
+      chatInterfaceRef.current.sendMessage(message);
+    }
+  };
+
   // Simple message handler
   const handleSendMessage = async (message: string) => {
     try {
@@ -114,6 +124,9 @@ export default function HomePage() {
     <div className="min-h-screen bg-gray-50">
       <Toaster position="top-right" />
       
+      {/* Navigation */}
+      <InteractiveNavigation onSendMessage={handleNavigationMessage} />
+      
       {/* Hero Section */}
       <HeroSection />
       
@@ -144,7 +157,7 @@ export default function HomePage() {
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-orange-500"></div>
               </div>
             }>
-              <SimpleChatInterface onSendMessage={handleSendMessage} />
+              <SimpleChatInterface ref={chatInterfaceRef} onSendMessage={handleSendMessage} />
             </Suspense>
           </div>
         </motion.section>
@@ -220,34 +233,84 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="col-span-2">
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent hover:from-orange-300 hover:to-red-300 transition-all duration-300 cursor-pointer"
+              >
                 RAG Food
-              </h3>
+              </button>
               <p className="text-gray-400 mb-4">
                 AI-powered culinary explorer bringing you authentic recipes and cooking wisdom from around the globe.
               </p>
               <div className="flex space-x-4">
-                <span className="text-2xl">🍜</span>
-                <span className="text-2xl">🍕</span>
-                <span className="text-2xl">🍛</span>
-                <span className="text-2xl">🥘</span>
-                <span className="text-2xl">🍲</span>
+                {[
+                  { emoji: '🍜', name: 'Ramen', query: 'How to make authentic ramen?' },
+                  { emoji: '🍕', name: 'Pizza', query: 'How to make homemade pizza?' },
+                  { emoji: '🍛', name: 'Curry', query: 'Indian curry recipes' },
+                  { emoji: '🥘', name: 'Paella', query: 'Spanish paella recipe' },
+                  { emoji: '🍲', name: 'Stew', query: 'Hearty stew recipes' }
+                ].map((food) => (
+                  <button
+                    key={food.name}
+                    onClick={() => handleNavigationMessage(food.query)}
+                    className="text-2xl hover:scale-110 transition-transform duration-200 cursor-pointer"
+                    title={`Ask about ${food.name}`}
+                  >
+                    {food.emoji}
+                  </button>
+                ))}
               </div>
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">Features</h4>
+              <h4 className="text-lg font-semibold mb-4">Quick Actions</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>🤖 AI Recipe Assistant</li>
-                <li>🌍 Global Cuisine Database</li>
-                <li>📋 Detailed Instructions</li>
-                <li>📊 Nutritional Information</li>
+                <li>
+                  <button
+                    onClick={() => handleNavigationMessage('Give me popular recipe suggestions')}
+                    className="hover:text-orange-400 transition-colors duration-200 cursor-pointer flex items-center gap-2"
+                  >
+                    🤖 AI Recipe Assistant
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleNavigationMessage('Show me global cuisine options')}
+                    className="hover:text-orange-400 transition-colors duration-200 cursor-pointer flex items-center gap-2"
+                  >
+                    🌍 Global Cuisine Database
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleNavigationMessage('Give me detailed cooking instructions')}
+                    className="hover:text-orange-400 transition-colors duration-200 cursor-pointer flex items-center gap-2"
+                  >
+                    📋 Detailed Instructions
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => handleNavigationMessage('Provide nutritional information for meals')}
+                    className="hover:text-orange-400 transition-colors duration-200 cursor-pointer flex items-center gap-2"
+                  >
+                    📊 Nutritional Information
+                  </button>
+                </li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2025 RAG Food. Made with ❤️ using Groq AI, Upstash, and Next.js 15.</p>
+            <div className="mt-2">
+              <button
+                onClick={() => handleNavigationMessage('What can you help me with?')}
+                className="text-orange-400 hover:text-orange-300 transition-colors duration-200 cursor-pointer"
+              >
+                Try asking me anything about food! 🍽️
+              </button>
+            </div>
           </div>
         </div>
       </footer>

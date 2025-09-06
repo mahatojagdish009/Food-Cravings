@@ -2,7 +2,6 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { HydrationBoundary } from '@/components/HydrationBoundary'
-import InteractiveNavigation from '@/components/InteractiveNavigation'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -56,7 +55,6 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <HydrationBoundary>
-          <InteractiveNavigation />
           <div className="pt-20">
             {children}
           </div>

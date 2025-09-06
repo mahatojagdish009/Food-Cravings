@@ -2,23 +2,43 @@
 
 import React from 'react';
 
-export default function InteractiveNavigation() {
+interface NavigationProps {
+  onSendMessage?: (message: string) => void;
+}
+
+export default function InteractiveNavigation({ onSendMessage }: NavigationProps) {
   // Simple scroll functions
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const scrollToChat = () => {
+  const handleAIChefClick = () => {
+    // Scroll to chat and send a food suggestion message
     const chatSection = document.getElementById('ai-chat-section');
     if (chatSection) {
       chatSection.scrollIntoView({ behavior: 'smooth' });
     }
+    
+    // Send a message for AI Chef suggestions
+    if (onSendMessage) {
+      setTimeout(() => {
+        onSendMessage('Give me some popular recipe suggestions and cooking tips');
+      }, 500);
+    }
   };
 
-  const scrollToRecipes = () => {
-    const recipesSection = document.getElementById('featured-recipes-section');
-    if (recipesSection) {
-      recipesSection.scrollIntoView({ behavior: 'smooth' });
+  const handleRecipesClick = () => {
+    // Scroll to chat and ask for recipe categories
+    const chatSection = document.getElementById('ai-chat-section');
+    if (chatSection) {
+      chatSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Send a message for recipe exploration
+    if (onSendMessage) {
+      setTimeout(() => {
+        onSendMessage('Show me different recipe categories and meal ideas');
+      }, 500);
     }
   };
 
@@ -42,13 +62,13 @@ export default function InteractiveNavigation() {
           {/* Navigation Links */}
           <div className="flex items-center gap-6">
             <button 
-              onClick={scrollToChat}
+              onClick={handleAIChefClick}
               className="text-gray-700 hover:text-orange-600 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-orange-50"
             >
               💬 AI Chef
             </button>
             <button 
-              onClick={scrollToRecipes}
+              onClick={handleRecipesClick}
               className="text-gray-700 hover:text-orange-600 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-orange-50"
             >
               📚 Recipes

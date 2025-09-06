@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 interface HydrationBoundaryProps {
   children: React.ReactNode;
@@ -11,8 +11,6 @@ interface HydrationBoundaryProps {
  * Specifically addresses issues with Grammarly and other extensions that modify the DOM
  */
 export function HydrationBoundary({ children }: HydrationBoundaryProps) {
-  const [isHydrated, setIsHydrated] = useState(false);
-
   useEffect(() => {
     // Clean up any browser extension artifacts that might cause hydration issues
     const cleanupExtensionAttributes = () => {
@@ -36,9 +34,6 @@ export function HydrationBoundary({ children }: HydrationBoundaryProps) {
 
     // Clean up on mount
     cleanupExtensionAttributes();
-    
-    // Mark as hydrated
-    setIsHydrated(true);
 
     // Set up a mutation observer to clean up extension interference
     const observer = new MutationObserver((mutations) => {
@@ -67,10 +62,6 @@ export function HydrationBoundary({ children }: HydrationBoundaryProps) {
       observer.disconnect();
     };
   }, []);
-
-  if (!isHydrated) {
-    return <div style={{ opacity: 0 }}>{children}</div>;
-  }
 
   return <>{children}</>;
 }
