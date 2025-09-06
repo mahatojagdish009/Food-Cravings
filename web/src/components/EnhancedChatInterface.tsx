@@ -166,15 +166,28 @@ export function EnhancedChatInterface({ className = '', onSendMessage }: Enhance
     } catch (error) {
       console.error('Chat error:', error);
       
+      let errorMessage = '❌ Sorry, I encountered an error while processing your request. Please try again.';
+      
+      // More specific error messages
+      if (error instanceof Error) {
+        if (error.message.includes('fetch')) {
+          errorMessage = '🌐 Connection error. Please check your internet and try again.';
+        } else if (error.message.includes('500')) {
+          errorMessage = '⚙️ Server error. Our AI chef is taking a quick break. Please try again in a moment.';
+        } else if (error.message.includes('timeout')) {
+          errorMessage = '⏱️ Request timed out. Please try a shorter question or try again.';
+        }
+      }
+      
       // Add error message with hydration-safe ID
-      const errorMessage: ChatMessage = {
+      const errorChatMessage: ChatMessage = {
         id: generateMessageId(),
         role: 'assistant',
-        content: '❌ Sorry, I encountered an error while processing your request. Please try again.',
+        content: errorMessage,
         timestamp: getCurrentTimestamp(),
       };
 
-      setMessages(prev => [...prev, errorMessage]);
+      setMessages(prev => [...prev, errorChatMessage]);
     } finally {
       setIsLoading(false);
       inputRef.current?.focus();

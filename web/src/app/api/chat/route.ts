@@ -35,6 +35,11 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('❌ Chat API error:', error);
+    console.error('Error details:', {
+      name: error instanceof Error ? error.name : 'Unknown',
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : 'No stack trace'
+    });
     
     const apiError: ApiError = {
       error: 'Internal Server Error',

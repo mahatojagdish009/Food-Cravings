@@ -20,14 +20,12 @@ export default function HeroSection() {
   // Smooth scroll to AI Chat section
   const scrollToAIChef = () => {
     console.log('🤖 Scrolling to AI Chef section...');
-    alert('🤖 Trying to scroll to AI Chef section!');
     const aiSection = document.getElementById('ai-chat-section');
     if (aiSection) {
       aiSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       console.log('✅ Found AI Chat section');
     } else {
       console.log('⚠️ AI Chat section not found, using fallback');
-      alert('⚠️ AI Chat section not found, scrolling to fallback position');
       // Fallback: scroll to approximate position
       window.scrollTo({ top: 800, behavior: 'smooth' });
     }
@@ -36,14 +34,12 @@ export default function HeroSection() {
   // Scroll to Featured Recipes section
   const scrollToRecipes = () => {
     console.log('🍜 Scrolling to Recipes section...');
-    alert('🍜 Trying to scroll to Recipes section!');
     const recipesSection = document.getElementById('featured-recipes-section');
     if (recipesSection) {
       recipesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       console.log('✅ Found Recipes section');
     } else {
       console.log('⚠️ Recipes section not found, using fallback');
-      alert('⚠️ Recipes section not found, scrolling to fallback position');
       // Fallback: scroll to approximate position
       window.scrollTo({ top: 1200, behavior: 'smooth' });
     }
